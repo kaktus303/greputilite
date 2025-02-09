@@ -1,19 +1,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
-
-typedef struct {
-  int e;
-  int i;
-  int v;
-  int c;
-  int l;
-  int n;
-  int h;
-  int s;
-  int f;
-  int o;
+#include <ctype.h>
+typedef struct
+{
+    int e;
+    int i;
+    int v;
+    int c;
+    int l;
+    int n;
+    int h;
+    int s;
+    int f;
+    int o;
 } Flags;
 void null_stuct(Flags *flags)
 {
@@ -28,9 +28,7 @@ void null_stuct(Flags *flags)
     flags->f = 0;
     flags->o = 0;
 }
-// Добавить динамический массив для шаблонов
-// Добавить перебор шаблонов
-// Добавить отчистку памяти
+
 int find_flags(int argc, char *argv[], Flags *flags)
 {
     int execute_flag = 1;
@@ -56,7 +54,7 @@ int find_flags(int argc, char *argv[], Flags *flags)
                 else if (argv[i][j] == 'f')
                     flags->f = 1;
                 else if (argv[i][j] == 'o')
-                    flags->c = 1;
+                    flags->o = 1;
                 else if (argv[i][j] == 'e')
                 {
                     flags->e = 1;
@@ -73,7 +71,44 @@ int find_flags(int argc, char *argv[], Flags *flags)
         }
     }
     return execute_flag;
-    
+}
+void find_files_shablons(int argc, char *argv[], int *files, int *number_of_files, int *shablons, int *number_of_shablons)
+{
+    for (int i = 1; i < argc; ++i)
+    {
+        if (argv[i][0] == '-')
+        {
+            if (argv[i][1] == 'e')
+            {
+                shablons[*number_of_shablons] = i + 1;
+                i += 1;
+                *number_of_shablons += 1;
+            }
+        }
+        else
+        {
+            files[*number_of_files] = i;
+            *number_of_files += 1;
+        }
+    }
+}
+void no_e_flag(int argc, char *argv[], int *shablons, int *number_of_shablons)
+{
+    for (int i = 1; i < argc && number_of_shablons == 0; ++i)
+    {
+        if (argv[i][0] != '-')
+        {
+            shablons[0] = i;
+            *number_of_shablons += 1;
+        }
+    }
+}
+void register_down(char *strint)
+{
+    for (int i = 0; i < (int)strlen(strint); i++)
+    {
+        strint[i] = tolower(strint[i]);
+    }
 }
 int main(int argc, char *argv[])
 {
@@ -85,102 +120,110 @@ int main(int argc, char *argv[])
     int *shablons = malloc(sizeof(int) * argc);
     int *files = malloc(sizeof(int) * argc);
     FILE *file;
-    for (int i = 1; i < argc; ++i)
+    if (find_flags(argc, argv, flags))
     {
-        if (argv[i][0] == '-')
+        find_files_shablons(argc, argv, files, &number_of_files, shablons, &number_of_shablons);
+
+        if (!flags->e)
+            no_e_flag(argc, argv, shablons, &number_of_shablons);
+        for (int i = 0; i < number_of_files; ++i)
         {
-            for (int j = 1; j < strlen(argv[i]); ++j)
-                if (argv[i][j] == 'i')
-                    flags->i = 1;
-                else if (argv[i][j] == 'n')
-                    flags->n = 1;
-                else if (argv[i][j] == 'l')
-                    flags->l = 1;
-                else if (argv[i][j] == 'v')
-                    flags->v = 1;
-                else if (argv[i][j] == 'c')
-                    flags->c = 1;
-                else if (argv[i][j] == 'h')
-                    flags->h = 1;
-                else if (argv[i][j] == 's')
-                    flags->s = 1;
-                else if (argv[i][j] == 'f')
-                    flags->f = 1;
-                else if (argv[i][j] == 'o')
-                    flags->c = 1;
-                else if (argv[i][j] == 'e')
-                {
-                    flags->e = 1;
-                    shablons[number_of_shablons] = i + 1;
-                    i += 1;
-                    number_of_shablons++;
-                    break;
-                }
-                else
-                {
-                    printf("grep: invalid option -- '%c'\nUsage: grep [OPTION]... PATTERNS [FILE]...\nTry 'grep --help' for more information.\n", argv[i][j]);
-                    execute_flag = 0;
-                }
-        }
-        else
-        {
-            files[number_of_files] = i;
-            number_of_files++;
-        }
-    }
-    for (int i = 1; i < argc && flag == 1 && !e_flag; ++i)
-    {
-        if (argv[i][0] != '-')
-        {
-            shablons[0] = i;
-            flag = 0;
-            number_of_shablons++;
-        }
-    }
-    for (int i = 0; i < number_of_files; ++i)
-    {
-            if(files[i]!=shablons[0]){
-            file = fopen(argv[files[i]], "r");
-            if (file)
+            if (files[i] != shablons[0])
             {
-                string_counter = 0;
-                all_strings_counter = 0;
-                while (getline(&now_string, &string_len, file) != -1)
+                file = fopen(argv[files[i]], "r");
+                if (file)
                 {
-                    all_strings_counter++;
-                    for (int j = 0; j < number_of_shablons; ++j)
+                    string_counter = 0;
+                    all_strings_counter = 0;
+                    while (getline(&now_string, &string_len, file) != -1)
                     {
-                        variable = strstr(now_string, argv[shablons[j]]);
-                        if ((variable != NULL && v_flag == 0) || (variable == NULL && v_flag == 1))
-                        {
-                            string_counter++;
-                            if (!c_flag && !l_flag)
+                        all_strings_counter++;
+                        for (int j = 0; j < number_of_shablons; ++j)
+                        {   
+                            if(flags->i)
                             {
-                                printf("%s:", argv[files[i]]);
-                                if (n_flag)
-                                    printf("%d: ", all_strings_counter);
-                                printf("%s", now_string);
+                                register_down(now_string);
+                                register_down(argv[shablons[j]]);
+                                // printf("%s", (unsigned int)strlen(variable));
+                            }
+                            variable = strstr(now_string, argv[shablons[j]]);
+                            if ((variable != NULL && flags->v == 0) || (variable == NULL && flags->v == 1))
+                            {
+                                string_counter++;
+                                if (!flags->c && !flags->l)
+                                {
+                                    if(!flags->h)
+                                    printf("%s:", argv[files[i]]);
+                                    if (flags->n)
+                                        printf("%d: ", all_strings_counter);
+                                    if(flags->o) printf("%s\n", argv[shablons[j]]);
+                                    else printf("%s", now_string);
+                                }
                             }
                         }
-                        if (string_counter != 0 && l_flag)
-                        {
-                            printf("%s", argv[i]);
-                        }
-                        if (!l_flag && c_flag)
-                        {
-                            printf("%s: %d", argv[files[i]], string_counter);
-                        }
+                    }
+                    if (string_counter != 0 && flags->l)
+                    {
+                        printf("%s\n", argv[files[i]]);
+                    }
+                    if (!flags->l && flags->c)
+                    {
+                        printf("%s: %d\n", argv[files[i]], string_counter);
                     }
                 }
-            }
-            else
-            {
-                printf("grep: %s: No such file or directory\n", argv[files[i]]);
-            }
-            }
-        
-    }
 
-    // printf("\n%d\n", shablon);
-    // printf("%s\n", strstr('aa', 'faa a aa'));
+                else
+                {
+                    if(!flags->s) printf("grep: %s: No such file or directory\n", argv[files[i]]);
+                }
+            }
+        }
+    }
 }
+
+// for (int i = 0; i < number_of_files; ++i)
+// {
+//     if (files[i] != shablons[0])
+//     {
+//         file = fopen(argv[files[i]], "r");
+//         if (file)
+//         {
+//             string_counter = 0;
+//             all_strings_counter = 0;
+//             while (getline(&now_string, &string_len, file) != -1)
+//             {
+//                 all_strings_counter++;
+//                 for (int j = 0; j < number_of_shablons; ++j)
+//                 {
+//                     variable = strstr(now_string, argv[shablons[j]]);
+//                     if ((variable != NULL && v_flag == 0) || (variable == NULL && v_flag == 1))
+//                     {
+//                         string_counter++;
+//                         if (!c_flag && !l_flag)
+//                         {
+//                             printf("%s:", argv[files[i]]);
+//                             if (n_flag)
+//                                 printf("%d: ", all_strings_counter);
+//                             printf("%s", now_string);
+//                         }
+//                     }
+//                     if (string_counter != 0 && l_flag)
+//                     {
+//                         printf("%s", argv[i]);
+//                     }
+//                     if (!l_flag && c_flag)
+//                     {
+//                         printf("%s: %d", argv[files[i]], string_counter);
+//                     }
+//                 }
+//             }
+//         }
+//         else
+//         {
+//             printf("grep: %s: No such file or directory\n", argv[files[i]]);
+//         }
+//     }
+// }
+
+// printf("\n%d\n", shablon);
+// printf("%s\n", strstr('aa', 'faa a aa'));
