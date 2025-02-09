@@ -1,14 +1,83 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
+
+typedef struct {
+  int e;
+  int i;
+  int v;
+  int c;
+  int l;
+  int n;
+  int h;
+  int s;
+  int f;
+  int o;
+} Flags;
+void null_stuct(Flags *flags)
+{
+    flags->e = 0;
+    flags->i = 0;
+    flags->v = 0;
+    flags->c = 0;
+    flags->l = 0;
+    flags->n = 0;
+    flags->h = 0;
+    flags->s = 0;
+    flags->f = 0;
+    flags->o = 0;
+}
 // Добавить динамический массив для шаблонов
 // Добавить перебор шаблонов
 // Добавить отчистку памяти
-void array_add(int *array, int *capasity, int *number, int element)
+int find_flags(int argc, char *argv[], Flags *flags)
 {
+    int execute_flag = 1;
+    for (int i = 1; i < argc; ++i)
+    {
+        if (argv[i][0] == '-')
+        {
+            for (int j = 1; j < strlen(argv[i]); ++j)
+                if (argv[i][j] == 'i')
+                    flags->i = 1;
+                else if (argv[i][j] == 'n')
+                    flags->n = 1;
+                else if (argv[i][j] == 'l')
+                    flags->l = 1;
+                else if (argv[i][j] == 'v')
+                    flags->v = 1;
+                else if (argv[i][j] == 'c')
+                    flags->c = 1;
+                else if (argv[i][j] == 'h')
+                    flags->h = 1;
+                else if (argv[i][j] == 's')
+                    flags->s = 1;
+                else if (argv[i][j] == 'f')
+                    flags->f = 1;
+                else if (argv[i][j] == 'o')
+                    flags->c = 1;
+                else if (argv[i][j] == 'e')
+                {
+                    flags->e = 1;
+                    // shablons[number_of_shablons] = i + 1;
+                    // i += 1;
+                    // number_of_shablons++;
+                    // break;
+                }
+                else
+                {
+                    printf("grep: invalid option -- '%c'\nUsage: grep [OPTION]... PATTERNS [FILE]...\nTry 'grep --help' for more information.\n", argv[i][j]);
+                    execute_flag = 0;
+                }
+        }
+    }
+    return execute_flag;
+    
 }
 int main(int argc, char *argv[])
 {
+    Flags *flags = malloc(sizeof(Flags));
     int e_flag = 0, i_flag = 0, v_flag = 0, c_flag = 0, l_flag = 0, n_flag = 0, execute_flag = 1, shablon = -1, flag = 1, string_counter = 0, all_strings_counter = 0, number_of_shablons = 0;
     int number_of_files = 0;
     size_t string_len = 1;
@@ -22,18 +91,26 @@ int main(int argc, char *argv[])
         {
             for (int j = 1; j < strlen(argv[i]); ++j)
                 if (argv[i][j] == 'i')
-                    i_flag = 1;
+                    flags->i = 1;
                 else if (argv[i][j] == 'n')
-                    n_flag = 1;
+                    flags->n = 1;
                 else if (argv[i][j] == 'l')
-                    l_flag = 1;
+                    flags->l = 1;
                 else if (argv[i][j] == 'v')
-                    v_flag = 1;
+                    flags->v = 1;
                 else if (argv[i][j] == 'c')
-                    c_flag = 1;
+                    flags->c = 1;
+                else if (argv[i][j] == 'h')
+                    flags->h = 1;
+                else if (argv[i][j] == 's')
+                    flags->s = 1;
+                else if (argv[i][j] == 'f')
+                    flags->f = 1;
+                else if (argv[i][j] == 'o')
+                    flags->c = 1;
                 else if (argv[i][j] == 'e')
                 {
-                    e_flag = 1;
+                    flags->e = 1;
                     shablons[number_of_shablons] = i + 1;
                     i += 1;
                     number_of_shablons++;
