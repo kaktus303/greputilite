@@ -78,7 +78,8 @@ void find_files_shablons(int argc, char *argv[], int *files, int *number_of_file
     {
         if (argv[i][0] == '-')
         {
-            if (argv[i][1] == 'e')
+            for (int j = 1; j < strlen(argv[i]); ++j)
+            if (argv[i][j] == 'e')
             {
                 shablons[*number_of_shablons] = i + 1;
                 i += 1;
@@ -155,12 +156,14 @@ int main(int argc, char *argv[])
                                     if(!flags->h)
                                     printf("%s:", argv[files[i]]);
                                     if (flags->n)
-                                        printf("%d: ", all_strings_counter);
+                                        printf("%d:", all_strings_counter);
                                     if(flags->o) printf("%s\n", argv[shablons[j]]);
                                     else printf("%s", now_string);
                                 }
                             }
                         }
+                        // free(now_string);
+                        // free(variable);
                     }
                     if (string_counter != 0 && flags->l)
                     {
@@ -168,7 +171,7 @@ int main(int argc, char *argv[])
                     }
                     if (!flags->l && flags->c)
                     {
-                        printf("%s: %d\n", argv[files[i]], string_counter);
+                        printf("%s:%d\n", argv[files[i]], string_counter);
                     }
                 }
 
@@ -179,6 +182,9 @@ int main(int argc, char *argv[])
             }
         }
     }
+    free(flags);
+    free(shablons);
+    free(files);
 }
 
 // for (int i = 0; i < number_of_files; ++i)

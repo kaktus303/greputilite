@@ -1,0 +1,2608 @@
+
+
+
+
+
+
+ Test 0 : 
+ 
+==115633== Memcheck, a memory error detector
+==115633== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==115633== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==115633== Command: ./s21_grep -e 1 -e E TestText1.txt TestText2.txt TestText3.txt
+==115633== 
+==115633== Conditional jump or move depends on uninitialised value(s)
+==115633==    at 0x48FF1F6: getdelim (iogetdelim.c:62)
+==115633==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115633== 
+==115633== Conditional jump or move depends on uninitialised value(s)
+==115633==    at 0x109906: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115633== 
+==115633== Conditional jump or move depends on uninitialised value(s)
+==115633==    at 0x109999: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115633== 
+==115633== Conditional jump or move depends on uninitialised value(s)
+==115633==    at 0x1099C3: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115633== 
+==115633== Conditional jump or move depends on uninitialised value(s)
+==115633==    at 0x1099D2: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115633== 
+==115633== Conditional jump or move depends on uninitialised value(s)
+==115633==    at 0x1099E1: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115633== 
+==115633== Conditional jump or move depends on uninitialised value(s)
+==115633==    at 0x109A30: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115633== 
+==115633== Conditional jump or move depends on uninitialised value(s)
+==115633==    at 0x109A54: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115633== 
+==115633== Conditional jump or move depends on uninitialised value(s)
+==115633==    at 0x1099B0: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115633== 
+==115633== Conditional jump or move depends on uninitialised value(s)
+==115633==    at 0x109AE8: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115633== 
+==115633== Conditional jump or move depends on uninitialised value(s)
+==115633==    at 0x109B28: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115633== 
+==115633== Conditional jump or move depends on uninitialised value(s)
+==115633==    at 0x109B37: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115633== 
+TestText1.txt:123   456
+TestText3.txt: Three filEs 
+TestText3.txt:   175
+TestText3.txt:751
+==115633== 
+==115633== HEAP SUMMARY:
+==115633==     in use at exit: 1,536 bytes in 4 blocks
+==115633==   total heap usage: 11 allocs, 7 frees, 18,024 bytes allocated
+==115633== 
+==115633== 120 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==115633==    at 0x48457A8: malloc (vg_replace_malloc.c:446)
+==115633==    by 0x48FF39D: getdelim (iogetdelim.c:65)
+==115633==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115633== 
+==115633== LEAK SUMMARY:
+==115633==    definitely lost: 120 bytes in 1 blocks
+==115633==    indirectly lost: 0 bytes in 0 blocks
+==115633==      possibly lost: 0 bytes in 0 blocks
+==115633==    still reachable: 1,416 bytes in 3 blocks
+==115633==         suppressed: 0 bytes in 0 blocks
+==115633== Reachable blocks (those to which a pointer was found) are not shown.
+==115633== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==115633== 
+==115633== Use --track-origins=yes to see where uninitialised values come from
+==115633== For lists of detected and suppressed errors, rerun with: -s
+==115633== ERROR SUMMARY: 130 errors from 13 contexts (suppressed: 0 from 0)
+
+
+
+
+
+ Test 1 : 
+ 
+==115646== Memcheck, a memory error detector
+==115646== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==115646== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==115646== Command: ./s21_grep -ie 1 -ie E TestText1.txt TestText2.txt TestText3.txt
+==115646== 
+==115646== Conditional jump or move depends on uninitialised value(s)
+==115646==    at 0x48FF1F6: getdelim (iogetdelim.c:62)
+==115646==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115646== 
+==115646== Conditional jump or move depends on uninitialised value(s)
+==115646==    at 0x109999: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115646== 
+==115646== Conditional jump or move depends on uninitialised value(s)
+==115646==    at 0x1099C3: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115646== 
+==115646== Conditional jump or move depends on uninitialised value(s)
+==115646==    at 0x1099D2: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115646== 
+==115646== Conditional jump or move depends on uninitialised value(s)
+==115646==    at 0x1099E1: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115646== 
+==115646== Conditional jump or move depends on uninitialised value(s)
+==115646==    at 0x109A30: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115646== 
+==115646== Conditional jump or move depends on uninitialised value(s)
+==115646==    at 0x109A54: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115646== 
+==115646== Conditional jump or move depends on uninitialised value(s)
+==115646==    at 0x1099B0: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115646== 
+==115646== Conditional jump or move depends on uninitialised value(s)
+==115646==    at 0x109AE8: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115646== 
+==115646== Conditional jump or move depends on uninitialised value(s)
+==115646==    at 0x109B28: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115646== 
+==115646== Conditional jump or move depends on uninitialised value(s)
+==115646==    at 0x109B37: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115646== 
+TestText1.txt:123   456
+TestText1.txt:e
+TestText2.txt:two files   456
+TestText3.txt: three files 
+TestText3.txt:   175
+TestText3.txt:751
+TestText3.txt:hello world
+TestText3.txt:this is a test
+TestText3.txt:another lines
+==115646== 
+==115646== HEAP SUMMARY:
+==115646==     in use at exit: 1,536 bytes in 4 blocks
+==115646==   total heap usage: 11 allocs, 7 frees, 18,024 bytes allocated
+==115646== 
+==115646== 120 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==115646==    at 0x48457A8: malloc (vg_replace_malloc.c:446)
+==115646==    by 0x48FF39D: getdelim (iogetdelim.c:65)
+==115646==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115646== 
+==115646== LEAK SUMMARY:
+==115646==    definitely lost: 120 bytes in 1 blocks
+==115646==    indirectly lost: 0 bytes in 0 blocks
+==115646==      possibly lost: 0 bytes in 0 blocks
+==115646==    still reachable: 1,416 bytes in 3 blocks
+==115646==         suppressed: 0 bytes in 0 blocks
+==115646== Reachable blocks (those to which a pointer was found) are not shown.
+==115646== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==115646== 
+==115646== Use --track-origins=yes to see where uninitialised values come from
+==115646== For lists of detected and suppressed errors, rerun with: -s
+==115646== ERROR SUMMARY: 106 errors from 12 contexts (suppressed: 0 from 0)
+
+
+
+
+
+ Test 2 : 
+ 
+==115656== Memcheck, a memory error detector
+==115656== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==115656== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==115656== Command: ./s21_grep -ve 1 -ve E TestText1.txt TestText2.txt TestText3.txt
+==115656== 
+==115656== Conditional jump or move depends on uninitialised value(s)
+==115656==    at 0x48FF1F6: getdelim (iogetdelim.c:62)
+==115656==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115656== 
+==115656== Conditional jump or move depends on uninitialised value(s)
+==115656==    at 0x109906: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115656== 
+==115656== Conditional jump or move depends on uninitialised value(s)
+==115656==    at 0x1099C3: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115656== 
+==115656== Conditional jump or move depends on uninitialised value(s)
+==115656==    at 0x1099D2: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115656== 
+==115656== Conditional jump or move depends on uninitialised value(s)
+==115656==    at 0x1099E1: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115656== 
+==115656== Conditional jump or move depends on uninitialised value(s)
+==115656==    at 0x109A30: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115656== 
+==115656== Conditional jump or move depends on uninitialised value(s)
+==115656==    at 0x109A54: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115656== 
+==115656== Conditional jump or move depends on uninitialised value(s)
+==115656==    at 0x109AE8: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115656== 
+==115656== Conditional jump or move depends on uninitialised value(s)
+==115656==    at 0x109B28: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115656== 
+==115656== Conditional jump or move depends on uninitialised value(s)
+==115656==    at 0x109B37: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115656== 
+TestText1.txt:123   456
+TestText1.txt:t
+TestText1.txt:t
+TestText1.txt:is
+TestText1.txt:is
+TestText1.txt:e
+TestText1.txt:e
+TestText1.txt:789
+TestText1.txt:789
+TestText2.txt:two files   456
+TestText2.txt:two files   456
+TestText2.txt:
+TestText2.txt:
+TestText2.txt:t
+TestText2.txt:t
+TestText2.txt:
+TestText2.txt:
+TestText2.txt:
+TestText2.txt:
+TestText2.txt:789
+TestText2.txt:789
+TestText3.txt:
+TestText3.txt:
+TestText3.txt:
+TestText3.txt:
+TestText3.txt:
+TestText3.txt:
+TestText3.txt: Three filEs 
+TestText3.txt: 
+TestText3.txt: 
+TestText3.txt:   175
+TestText3.txt:
+TestText3.txt:
+TestText3.txt:
+TestText3.txt:
+TestText3.txt:
+TestText3.txt:
+TestText3.txt:
+TestText3.txt:
+TestText3.txt:751
+TestText3.txt:hello world
+TestText3.txt:hello world
+TestText3.txt:this is a test
+TestText3.txt:this is a test
+TestText3.txt:another lines
+TestText3.txt:another lines
+==115656== 
+==115656== HEAP SUMMARY:
+==115656==     in use at exit: 1,536 bytes in 4 blocks
+==115656==   total heap usage: 11 allocs, 7 frees, 18,024 bytes allocated
+==115656== 
+==115656== 120 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==115656==    at 0x48457A8: malloc (vg_replace_malloc.c:446)
+==115656==    by 0x48FF39D: getdelim (iogetdelim.c:65)
+==115656==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115656== 
+==115656== LEAK SUMMARY:
+==115656==    definitely lost: 120 bytes in 1 blocks
+==115656==    indirectly lost: 0 bytes in 0 blocks
+==115656==      possibly lost: 0 bytes in 0 blocks
+==115656==    still reachable: 1,416 bytes in 3 blocks
+==115656==         suppressed: 0 bytes in 0 blocks
+==115656== Reachable blocks (those to which a pointer was found) are not shown.
+==115656== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==115656== 
+==115656== Use --track-origins=yes to see where uninitialised values come from
+==115656== For lists of detected and suppressed errors, rerun with: -s
+==115656== ERROR SUMMARY: 291 errors from 11 contexts (suppressed: 0 from 0)
+
+
+
+
+
+ Test 3 : 
+ 
+==115667== Memcheck, a memory error detector
+==115667== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==115667== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==115667== Command: ./s21_grep -ce 1 -ce E TestText1.txt TestText2.txt TestText3.txt
+==115667== 
+==115667== Conditional jump or move depends on uninitialised value(s)
+==115667==    at 0x48FF1F6: getdelim (iogetdelim.c:62)
+==115667==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115667== 
+==115667== Conditional jump or move depends on uninitialised value(s)
+==115667==    at 0x109906: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115667== 
+==115667== Conditional jump or move depends on uninitialised value(s)
+==115667==    at 0x109999: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115667== 
+==115667== Conditional jump or move depends on uninitialised value(s)
+==115667==    at 0x1099B0: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115667== 
+==115667== Conditional jump or move depends on uninitialised value(s)
+==115667==    at 0x109AE8: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115667== 
+==115667== Conditional jump or move depends on uninitialised value(s)
+==115667==    at 0x109B28: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115667== 
+TestText1.txt:1
+TestText2.txt:0
+TestText3.txt:3
+==115667== 
+==115667== HEAP SUMMARY:
+==115667==     in use at exit: 1,536 bytes in 4 blocks
+==115667==   total heap usage: 11 allocs, 7 frees, 18,024 bytes allocated
+==115667== 
+==115667== 120 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==115667==    at 0x48457A8: malloc (vg_replace_malloc.c:446)
+==115667==    by 0x48FF39D: getdelim (iogetdelim.c:65)
+==115667==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115667== 
+==115667== LEAK SUMMARY:
+==115667==    definitely lost: 120 bytes in 1 blocks
+==115667==    indirectly lost: 0 bytes in 0 blocks
+==115667==      possibly lost: 0 bytes in 0 blocks
+==115667==    still reachable: 1,416 bytes in 3 blocks
+==115667==         suppressed: 0 bytes in 0 blocks
+==115667== Reachable blocks (those to which a pointer was found) are not shown.
+==115667== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==115667== 
+==115667== Use --track-origins=yes to see where uninitialised values come from
+==115667== For lists of detected and suppressed errors, rerun with: -s
+==115667== ERROR SUMMARY: 107 errors from 7 contexts (suppressed: 0 from 0)
+
+
+
+
+
+ Test 4 : 
+ 
+==115677== Memcheck, a memory error detector
+==115677== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==115677== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==115677== Command: ./s21_grep -le 1 -le E TestText1.txt TestText2.txt TestText3.txt
+==115677== 
+==115677== Conditional jump or move depends on uninitialised value(s)
+==115677==    at 0x48FF1F6: getdelim (iogetdelim.c:62)
+==115677==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115677== 
+==115677== Conditional jump or move depends on uninitialised value(s)
+==115677==    at 0x109906: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115677== 
+==115677== Conditional jump or move depends on uninitialised value(s)
+==115677==    at 0x109999: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115677== 
+==115677== Conditional jump or move depends on uninitialised value(s)
+==115677==    at 0x1099C3: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115677== 
+==115677== Conditional jump or move depends on uninitialised value(s)
+==115677==    at 0x1099B0: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115677== 
+TestText1.txt
+TestText3.txt
+==115677== 
+==115677== HEAP SUMMARY:
+==115677==     in use at exit: 1,536 bytes in 4 blocks
+==115677==   total heap usage: 11 allocs, 7 frees, 18,024 bytes allocated
+==115677== 
+==115677== 120 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==115677==    at 0x48457A8: malloc (vg_replace_malloc.c:446)
+==115677==    by 0x48FF39D: getdelim (iogetdelim.c:65)
+==115677==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115677== 
+==115677== LEAK SUMMARY:
+==115677==    definitely lost: 120 bytes in 1 blocks
+==115677==    indirectly lost: 0 bytes in 0 blocks
+==115677==      possibly lost: 0 bytes in 0 blocks
+==115677==    still reachable: 1,416 bytes in 3 blocks
+==115677==         suppressed: 0 bytes in 0 blocks
+==115677== Reachable blocks (those to which a pointer was found) are not shown.
+==115677== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==115677== 
+==115677== Use --track-origins=yes to see where uninitialised values come from
+==115677== For lists of detected and suppressed errors, rerun with: -s
+==115677== ERROR SUMMARY: 106 errors from 6 contexts (suppressed: 0 from 0)
+
+
+
+
+
+ Test 5 : 
+ 
+==115689== Memcheck, a memory error detector
+==115689== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==115689== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==115689== Command: ./s21_grep -ne 1 -ne E TestText1.txt TestText2.txt TestText3.txt
+==115689== 
+==115689== Conditional jump or move depends on uninitialised value(s)
+==115689==    at 0x48FF1F6: getdelim (iogetdelim.c:62)
+==115689==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115689== 
+==115689== Conditional jump or move depends on uninitialised value(s)
+==115689==    at 0x109906: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115689== 
+==115689== Conditional jump or move depends on uninitialised value(s)
+==115689==    at 0x109999: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115689== 
+==115689== Conditional jump or move depends on uninitialised value(s)
+==115689==    at 0x1099C3: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115689== 
+==115689== Conditional jump or move depends on uninitialised value(s)
+==115689==    at 0x1099D2: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115689== 
+==115689== Conditional jump or move depends on uninitialised value(s)
+==115689==    at 0x1099E1: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115689== 
+==115689== Conditional jump or move depends on uninitialised value(s)
+==115689==    at 0x109A54: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115689== 
+==115689== Conditional jump or move depends on uninitialised value(s)
+==115689==    at 0x1099B0: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115689== 
+==115689== Conditional jump or move depends on uninitialised value(s)
+==115689==    at 0x109AE8: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115689== 
+==115689== Conditional jump or move depends on uninitialised value(s)
+==115689==    at 0x109B28: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115689== 
+==115689== Conditional jump or move depends on uninitialised value(s)
+==115689==    at 0x109B37: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115689== 
+TestText1.txt:1:123   456
+TestText3.txt:4: Three filEs 
+TestText3.txt:6:   175
+TestText3.txt:11:751
+==115689== 
+==115689== HEAP SUMMARY:
+==115689==     in use at exit: 1,536 bytes in 4 blocks
+==115689==   total heap usage: 11 allocs, 7 frees, 18,024 bytes allocated
+==115689== 
+==115689== 120 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==115689==    at 0x48457A8: malloc (vg_replace_malloc.c:446)
+==115689==    by 0x48FF39D: getdelim (iogetdelim.c:65)
+==115689==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115689== 
+==115689== LEAK SUMMARY:
+==115689==    definitely lost: 120 bytes in 1 blocks
+==115689==    indirectly lost: 0 bytes in 0 blocks
+==115689==      possibly lost: 0 bytes in 0 blocks
+==115689==    still reachable: 1,416 bytes in 3 blocks
+==115689==         suppressed: 0 bytes in 0 blocks
+==115689== Reachable blocks (those to which a pointer was found) are not shown.
+==115689== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==115689== 
+==115689== Use --track-origins=yes to see where uninitialised values come from
+==115689== For lists of detected and suppressed errors, rerun with: -s
+==115689== ERROR SUMMARY: 126 errors from 12 contexts (suppressed: 0 from 0)
+
+
+
+
+
+ Test 6 : 
+ 
+==115700== Memcheck, a memory error detector
+==115700== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==115700== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==115700== Command: ./s21_grep -ie 1 -ie E TestText1.txt TestText2.txt TestText3.txt
+==115700== 
+==115700== Conditional jump or move depends on uninitialised value(s)
+==115700==    at 0x48FF1F6: getdelim (iogetdelim.c:62)
+==115700==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115700== 
+==115700== Conditional jump or move depends on uninitialised value(s)
+==115700==    at 0x109999: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115700== 
+==115700== Conditional jump or move depends on uninitialised value(s)
+==115700==    at 0x1099C3: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115700== 
+==115700== Conditional jump or move depends on uninitialised value(s)
+==115700==    at 0x1099D2: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115700== 
+==115700== Conditional jump or move depends on uninitialised value(s)
+==115700==    at 0x1099E1: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115700== 
+==115700== Conditional jump or move depends on uninitialised value(s)
+==115700==    at 0x109A30: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115700== 
+==115700== Conditional jump or move depends on uninitialised value(s)
+==115700==    at 0x109A54: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115700== 
+==115700== Conditional jump or move depends on uninitialised value(s)
+==115700==    at 0x1099B0: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115700== 
+==115700== Conditional jump or move depends on uninitialised value(s)
+==115700==    at 0x109AE8: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115700== 
+==115700== Conditional jump or move depends on uninitialised value(s)
+==115700==    at 0x109B28: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115700== 
+==115700== Conditional jump or move depends on uninitialised value(s)
+==115700==    at 0x109B37: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115700== 
+TestText1.txt:123   456
+TestText1.txt:e
+TestText2.txt:two files   456
+TestText3.txt: three files 
+TestText3.txt:   175
+TestText3.txt:751
+TestText3.txt:hello world
+TestText3.txt:this is a test
+TestText3.txt:another lines
+==115700== 
+==115700== HEAP SUMMARY:
+==115700==     in use at exit: 1,536 bytes in 4 blocks
+==115700==   total heap usage: 11 allocs, 7 frees, 18,024 bytes allocated
+==115700== 
+==115700== 120 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==115700==    at 0x48457A8: malloc (vg_replace_malloc.c:446)
+==115700==    by 0x48FF39D: getdelim (iogetdelim.c:65)
+==115700==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115700== 
+==115700== LEAK SUMMARY:
+==115700==    definitely lost: 120 bytes in 1 blocks
+==115700==    indirectly lost: 0 bytes in 0 blocks
+==115700==      possibly lost: 0 bytes in 0 blocks
+==115700==    still reachable: 1,416 bytes in 3 blocks
+==115700==         suppressed: 0 bytes in 0 blocks
+==115700== Reachable blocks (those to which a pointer was found) are not shown.
+==115700== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==115700== 
+==115700== Use --track-origins=yes to see where uninitialised values come from
+==115700== For lists of detected and suppressed errors, rerun with: -s
+==115700== ERROR SUMMARY: 106 errors from 12 contexts (suppressed: 0 from 0)
+
+
+
+
+
+ Test 7 : 
+ 
+==115709== Memcheck, a memory error detector
+==115709== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==115709== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==115709== Command: ./s21_grep -ive 1 -ive E TestText1.txt TestText2.txt TestText3.txt
+==115709== 
+==115709== Conditional jump or move depends on uninitialised value(s)
+==115709==    at 0x48FF1F6: getdelim (iogetdelim.c:62)
+==115709==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115709== 
+==115709== Conditional jump or move depends on uninitialised value(s)
+==115709==    at 0x1099C3: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115709== 
+==115709== Conditional jump or move depends on uninitialised value(s)
+==115709==    at 0x1099D2: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115709== 
+==115709== Conditional jump or move depends on uninitialised value(s)
+==115709==    at 0x1099E1: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115709== 
+==115709== Conditional jump or move depends on uninitialised value(s)
+==115709==    at 0x109A30: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115709== 
+==115709== Conditional jump or move depends on uninitialised value(s)
+==115709==    at 0x109A54: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115709== 
+==115709== Conditional jump or move depends on uninitialised value(s)
+==115709==    at 0x109AE8: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115709== 
+==115709== Conditional jump or move depends on uninitialised value(s)
+==115709==    at 0x109B28: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115709== 
+==115709== Conditional jump or move depends on uninitialised value(s)
+==115709==    at 0x109B37: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115709== 
+TestText1.txt:123   456
+TestText1.txt:t
+TestText1.txt:t
+TestText1.txt:is
+TestText1.txt:is
+TestText1.txt:e
+TestText1.txt:789
+TestText1.txt:789
+TestText2.txt:two files   456
+TestText2.txt:
+TestText2.txt:
+TestText2.txt:t
+TestText2.txt:t
+TestText2.txt:
+TestText2.txt:
+TestText2.txt:
+TestText2.txt:
+TestText2.txt:789
+TestText2.txt:789
+TestText3.txt:
+TestText3.txt:
+TestText3.txt:
+TestText3.txt:
+TestText3.txt:
+TestText3.txt:
+TestText3.txt: three files 
+TestText3.txt: 
+TestText3.txt: 
+TestText3.txt:   175
+TestText3.txt:
+TestText3.txt:
+TestText3.txt:
+TestText3.txt:
+TestText3.txt:
+TestText3.txt:
+TestText3.txt:
+TestText3.txt:
+TestText3.txt:751
+TestText3.txt:hello world
+TestText3.txt:this is a test
+TestText3.txt:another lines
+==115709== 
+==115709== HEAP SUMMARY:
+==115709==     in use at exit: 1,536 bytes in 4 blocks
+==115709==   total heap usage: 11 allocs, 7 frees, 18,024 bytes allocated
+==115709== 
+==115709== 120 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==115709==    at 0x48457A8: malloc (vg_replace_malloc.c:446)
+==115709==    by 0x48FF39D: getdelim (iogetdelim.c:65)
+==115709==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115709== 
+==115709== LEAK SUMMARY:
+==115709==    definitely lost: 120 bytes in 1 blocks
+==115709==    indirectly lost: 0 bytes in 0 blocks
+==115709==      possibly lost: 0 bytes in 0 blocks
+==115709==    still reachable: 1,416 bytes in 3 blocks
+==115709==         suppressed: 0 bytes in 0 blocks
+==115709== Reachable blocks (those to which a pointer was found) are not shown.
+==115709== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==115709== 
+==115709== Use --track-origins=yes to see where uninitialised values come from
+==115709== For lists of detected and suppressed errors, rerun with: -s
+==115709== ERROR SUMMARY: 216 errors from 10 contexts (suppressed: 0 from 0)
+
+
+
+
+
+ Test 8 : 
+ 
+==115720== Memcheck, a memory error detector
+==115720== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==115720== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==115720== Command: ./s21_grep -ice 1 -ice E TestText1.txt TestText2.txt TestText3.txt
+==115720== 
+==115720== Conditional jump or move depends on uninitialised value(s)
+==115720==    at 0x48FF1F6: getdelim (iogetdelim.c:62)
+==115720==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115720== 
+==115720== Conditional jump or move depends on uninitialised value(s)
+==115720==    at 0x109999: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115720== 
+==115720== Conditional jump or move depends on uninitialised value(s)
+==115720==    at 0x1099B0: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115720== 
+==115720== Conditional jump or move depends on uninitialised value(s)
+==115720==    at 0x109AE8: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115720== 
+==115720== Conditional jump or move depends on uninitialised value(s)
+==115720==    at 0x109B28: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115720== 
+TestText1.txt:2
+TestText2.txt:1
+TestText3.txt:6
+==115720== 
+==115720== HEAP SUMMARY:
+==115720==     in use at exit: 1,536 bytes in 4 blocks
+==115720==   total heap usage: 11 allocs, 7 frees, 18,024 bytes allocated
+==115720== 
+==115720== 120 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==115720==    at 0x48457A8: malloc (vg_replace_malloc.c:446)
+==115720==    by 0x48FF39D: getdelim (iogetdelim.c:65)
+==115720==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115720== 
+==115720== LEAK SUMMARY:
+==115720==    definitely lost: 120 bytes in 1 blocks
+==115720==    indirectly lost: 0 bytes in 0 blocks
+==115720==      possibly lost: 0 bytes in 0 blocks
+==115720==    still reachable: 1,416 bytes in 3 blocks
+==115720==         suppressed: 0 bytes in 0 blocks
+==115720== Reachable blocks (those to which a pointer was found) are not shown.
+==115720== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==115720== 
+==115720== Use --track-origins=yes to see where uninitialised values come from
+==115720== For lists of detected and suppressed errors, rerun with: -s
+==115720== ERROR SUMMARY: 58 errors from 6 contexts (suppressed: 0 from 0)
+
+
+
+
+
+ Test 9 : 
+ 
+==115729== Memcheck, a memory error detector
+==115729== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==115729== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==115729== Command: ./s21_grep -ile 1 -ile E TestText1.txt TestText2.txt TestText3.txt
+==115729== 
+==115729== Conditional jump or move depends on uninitialised value(s)
+==115729==    at 0x48FF1F6: getdelim (iogetdelim.c:62)
+==115729==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115729== 
+==115729== Conditional jump or move depends on uninitialised value(s)
+==115729==    at 0x109999: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115729== 
+==115729== Conditional jump or move depends on uninitialised value(s)
+==115729==    at 0x1099C3: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115729== 
+==115729== Conditional jump or move depends on uninitialised value(s)
+==115729==    at 0x1099B0: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115729== 
+TestText1.txt
+TestText2.txt
+TestText3.txt
+==115729== 
+==115729== HEAP SUMMARY:
+==115729==     in use at exit: 1,536 bytes in 4 blocks
+==115729==   total heap usage: 11 allocs, 7 frees, 18,024 bytes allocated
+==115729== 
+==115729== 120 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==115729==    at 0x48457A8: malloc (vg_replace_malloc.c:446)
+==115729==    by 0x48FF39D: getdelim (iogetdelim.c:65)
+==115729==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115729== 
+==115729== LEAK SUMMARY:
+==115729==    definitely lost: 120 bytes in 1 blocks
+==115729==    indirectly lost: 0 bytes in 0 blocks
+==115729==      possibly lost: 0 bytes in 0 blocks
+==115729==    still reachable: 1,416 bytes in 3 blocks
+==115729==         suppressed: 0 bytes in 0 blocks
+==115729== Reachable blocks (those to which a pointer was found) are not shown.
+==115729== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==115729== 
+==115729== Use --track-origins=yes to see where uninitialised values come from
+==115729== For lists of detected and suppressed errors, rerun with: -s
+==115729== ERROR SUMMARY: 61 errors from 5 contexts (suppressed: 0 from 0)
+
+
+
+
+
+ Test 10 : 
+ 
+==115743== Memcheck, a memory error detector
+==115743== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==115743== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==115743== Command: ./s21_grep -ine 1 -ine E TestText1.txt TestText2.txt TestText3.txt
+==115743== 
+==115743== Conditional jump or move depends on uninitialised value(s)
+==115743==    at 0x48FF1F6: getdelim (iogetdelim.c:62)
+==115743==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115743== 
+==115743== Conditional jump or move depends on uninitialised value(s)
+==115743==    at 0x109999: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115743== 
+==115743== Conditional jump or move depends on uninitialised value(s)
+==115743==    at 0x1099C3: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115743== 
+==115743== Conditional jump or move depends on uninitialised value(s)
+==115743==    at 0x1099D2: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115743== 
+==115743== Conditional jump or move depends on uninitialised value(s)
+==115743==    at 0x1099E1: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115743== 
+==115743== Conditional jump or move depends on uninitialised value(s)
+==115743==    at 0x109A54: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115743== 
+==115743== Conditional jump or move depends on uninitialised value(s)
+==115743==    at 0x1099B0: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115743== 
+==115743== Conditional jump or move depends on uninitialised value(s)
+==115743==    at 0x109AE8: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115743== 
+==115743== Conditional jump or move depends on uninitialised value(s)
+==115743==    at 0x109B28: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115743== 
+==115743== Conditional jump or move depends on uninitialised value(s)
+==115743==    at 0x109B37: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115743== 
+TestText1.txt:1:123   456
+TestText1.txt:4:e
+TestText2.txt:1:two files   456
+TestText3.txt:4: three files 
+TestText3.txt:6:   175
+TestText3.txt:11:751
+TestText3.txt:12:hello world
+TestText3.txt:13:this is a test
+TestText3.txt:14:another lines
+==115743== 
+==115743== HEAP SUMMARY:
+==115743==     in use at exit: 1,536 bytes in 4 blocks
+==115743==   total heap usage: 11 allocs, 7 frees, 18,024 bytes allocated
+==115743== 
+==115743== 120 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==115743==    at 0x48457A8: malloc (vg_replace_malloc.c:446)
+==115743==    by 0x48FF39D: getdelim (iogetdelim.c:65)
+==115743==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115743== 
+==115743== LEAK SUMMARY:
+==115743==    definitely lost: 120 bytes in 1 blocks
+==115743==    indirectly lost: 0 bytes in 0 blocks
+==115743==      possibly lost: 0 bytes in 0 blocks
+==115743==    still reachable: 1,416 bytes in 3 blocks
+==115743==         suppressed: 0 bytes in 0 blocks
+==115743== Reachable blocks (those to which a pointer was found) are not shown.
+==115743== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==115743== 
+==115743== Use --track-origins=yes to see where uninitialised values come from
+==115743== For lists of detected and suppressed errors, rerun with: -s
+==115743== ERROR SUMMARY: 97 errors from 11 contexts (suppressed: 0 from 0)
+
+
+
+
+
+ Test 11 : 
+ 
+==115754== Memcheck, a memory error detector
+==115754== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==115754== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==115754== Command: ./s21_grep -vce 1 -vce E TestText1.txt TestText2.txt TestText3.txt
+==115754== 
+==115754== Conditional jump or move depends on uninitialised value(s)
+==115754==    at 0x48FF1F6: getdelim (iogetdelim.c:62)
+==115754==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115754== 
+==115754== Conditional jump or move depends on uninitialised value(s)
+==115754==    at 0x109906: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115754== 
+==115754== Conditional jump or move depends on uninitialised value(s)
+==115754==    at 0x109AE8: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115754== 
+==115754== Conditional jump or move depends on uninitialised value(s)
+==115754==    at 0x109B28: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115754== 
+TestText1.txt:9
+TestText2.txt:12
+TestText3.txt:25
+==115754== 
+==115754== HEAP SUMMARY:
+==115754==     in use at exit: 1,536 bytes in 4 blocks
+==115754==   total heap usage: 11 allocs, 7 frees, 18,024 bytes allocated
+==115754== 
+==115754== 120 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==115754==    at 0x48457A8: malloc (vg_replace_malloc.c:446)
+==115754==    by 0x48FF39D: getdelim (iogetdelim.c:65)
+==115754==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115754== 
+==115754== LEAK SUMMARY:
+==115754==    definitely lost: 120 bytes in 1 blocks
+==115754==    indirectly lost: 0 bytes in 0 blocks
+==115754==      possibly lost: 0 bytes in 0 blocks
+==115754==    still reachable: 1,416 bytes in 3 blocks
+==115754==         suppressed: 0 bytes in 0 blocks
+==115754== Reachable blocks (those to which a pointer was found) are not shown.
+==115754== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==115754== 
+==115754== Use --track-origins=yes to see where uninitialised values come from
+==115754== For lists of detected and suppressed errors, rerun with: -s
+==115754== ERROR SUMMARY: 58 errors from 5 contexts (suppressed: 0 from 0)
+
+
+
+
+
+ Test 12 : 
+ 
+==115764== Memcheck, a memory error detector
+==115764== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==115764== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==115764== Command: ./s21_grep -vle 1 -vle E TestText1.txt TestText2.txt TestText3.txt
+==115764== 
+==115764== Conditional jump or move depends on uninitialised value(s)
+==115764==    at 0x48FF1F6: getdelim (iogetdelim.c:62)
+==115764==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115764== 
+==115764== Conditional jump or move depends on uninitialised value(s)
+==115764==    at 0x109906: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115764== 
+==115764== Conditional jump or move depends on uninitialised value(s)
+==115764==    at 0x1099C3: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115764== 
+TestText1.txt
+TestText2.txt
+TestText3.txt
+==115764== 
+==115764== HEAP SUMMARY:
+==115764==     in use at exit: 1,536 bytes in 4 blocks
+==115764==   total heap usage: 11 allocs, 7 frees, 18,024 bytes allocated
+==115764== 
+==115764== 120 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==115764==    at 0x48457A8: malloc (vg_replace_malloc.c:446)
+==115764==    by 0x48FF39D: getdelim (iogetdelim.c:65)
+==115764==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115764== 
+==115764== LEAK SUMMARY:
+==115764==    definitely lost: 120 bytes in 1 blocks
+==115764==    indirectly lost: 0 bytes in 0 blocks
+==115764==      possibly lost: 0 bytes in 0 blocks
+==115764==    still reachable: 1,416 bytes in 3 blocks
+==115764==         suppressed: 0 bytes in 0 blocks
+==115764== Reachable blocks (those to which a pointer was found) are not shown.
+==115764== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==115764== 
+==115764== Use --track-origins=yes to see where uninitialised values come from
+==115764== For lists of detected and suppressed errors, rerun with: -s
+==115764== ERROR SUMMARY: 98 errors from 4 contexts (suppressed: 0 from 0)
+
+
+
+
+
+ Test 13 : 
+ 
+==115775== Memcheck, a memory error detector
+==115775== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==115775== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==115775== Command: ./s21_grep -vne 1 -vne E TestText1.txt TestText2.txt TestText3.txt
+==115775== 
+==115775== Conditional jump or move depends on uninitialised value(s)
+==115775==    at 0x48FF1F6: getdelim (iogetdelim.c:62)
+==115775==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115775== 
+==115775== Conditional jump or move depends on uninitialised value(s)
+==115775==    at 0x109906: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115775== 
+==115775== Conditional jump or move depends on uninitialised value(s)
+==115775==    at 0x1099C3: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115775== 
+==115775== Conditional jump or move depends on uninitialised value(s)
+==115775==    at 0x1099D2: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115775== 
+==115775== Conditional jump or move depends on uninitialised value(s)
+==115775==    at 0x1099E1: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115775== 
+==115775== Conditional jump or move depends on uninitialised value(s)
+==115775==    at 0x109A54: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115775== 
+==115775== Conditional jump or move depends on uninitialised value(s)
+==115775==    at 0x109AE8: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115775== 
+==115775== Conditional jump or move depends on uninitialised value(s)
+==115775==    at 0x109B28: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115775== 
+==115775== Conditional jump or move depends on uninitialised value(s)
+==115775==    at 0x109B37: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115775== 
+TestText1.txt:1:123   456
+TestText1.txt:2:t
+TestText1.txt:2:t
+TestText1.txt:3:is
+TestText1.txt:3:is
+TestText1.txt:4:e
+TestText1.txt:4:e
+TestText1.txt:5:789
+TestText1.txt:5:789
+TestText2.txt:1:two files   456
+TestText2.txt:1:two files   456
+TestText2.txt:2:
+TestText2.txt:2:
+TestText2.txt:3:t
+TestText2.txt:3:t
+TestText2.txt:4:
+TestText2.txt:4:
+TestText2.txt:5:
+TestText2.txt:5:
+TestText2.txt:6:789
+TestText2.txt:6:789
+TestText3.txt:1:
+TestText3.txt:1:
+TestText3.txt:2:
+TestText3.txt:2:
+TestText3.txt:3:
+TestText3.txt:3:
+TestText3.txt:4: Three filEs 
+TestText3.txt:5: 
+TestText3.txt:5: 
+TestText3.txt:6:   175
+TestText3.txt:7:
+TestText3.txt:7:
+TestText3.txt:8:
+TestText3.txt:8:
+TestText3.txt:9:
+TestText3.txt:9:
+TestText3.txt:10:
+TestText3.txt:10:
+TestText3.txt:11:751
+TestText3.txt:12:hello world
+TestText3.txt:12:hello world
+TestText3.txt:13:this is a test
+TestText3.txt:13:this is a test
+TestText3.txt:14:another lines
+TestText3.txt:14:another lines
+==115775== 
+==115775== HEAP SUMMARY:
+==115775==     in use at exit: 1,536 bytes in 4 blocks
+==115775==   total heap usage: 11 allocs, 7 frees, 18,024 bytes allocated
+==115775== 
+==115775== 120 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==115775==    at 0x48457A8: malloc (vg_replace_malloc.c:446)
+==115775==    by 0x48FF39D: getdelim (iogetdelim.c:65)
+==115775==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115775== 
+==115775== LEAK SUMMARY:
+==115775==    definitely lost: 120 bytes in 1 blocks
+==115775==    indirectly lost: 0 bytes in 0 blocks
+==115775==      possibly lost: 0 bytes in 0 blocks
+==115775==    still reachable: 1,416 bytes in 3 blocks
+==115775==         suppressed: 0 bytes in 0 blocks
+==115775== Reachable blocks (those to which a pointer was found) are not shown.
+==115775== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==115775== 
+==115775== Use --track-origins=yes to see where uninitialised values come from
+==115775== For lists of detected and suppressed errors, rerun with: -s
+==115775== ERROR SUMMARY: 245 errors from 10 contexts (suppressed: 0 from 0)
+
+
+
+
+
+ Test 14 : 
+ 
+==115784== Memcheck, a memory error detector
+==115784== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==115784== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==115784== Command: ./s21_grep -cle 1 -cle E TestText1.txt TestText2.txt TestText3.txt
+==115784== 
+==115784== Conditional jump or move depends on uninitialised value(s)
+==115784==    at 0x48FF1F6: getdelim (iogetdelim.c:62)
+==115784==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115784== 
+==115784== Conditional jump or move depends on uninitialised value(s)
+==115784==    at 0x109906: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115784== 
+==115784== Conditional jump or move depends on uninitialised value(s)
+==115784==    at 0x109999: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115784== 
+==115784== Conditional jump or move depends on uninitialised value(s)
+==115784==    at 0x1099B0: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115784== 
+TestText1.txt
+TestText3.txt
+==115784== 
+==115784== HEAP SUMMARY:
+==115784==     in use at exit: 1,536 bytes in 4 blocks
+==115784==   total heap usage: 11 allocs, 7 frees, 18,024 bytes allocated
+==115784== 
+==115784== 120 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==115784==    at 0x48457A8: malloc (vg_replace_malloc.c:446)
+==115784==    by 0x48FF39D: getdelim (iogetdelim.c:65)
+==115784==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115784== 
+==115784== LEAK SUMMARY:
+==115784==    definitely lost: 120 bytes in 1 blocks
+==115784==    indirectly lost: 0 bytes in 0 blocks
+==115784==      possibly lost: 0 bytes in 0 blocks
+==115784==    still reachable: 1,416 bytes in 3 blocks
+==115784==         suppressed: 0 bytes in 0 blocks
+==115784== Reachable blocks (those to which a pointer was found) are not shown.
+==115784== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==115784== 
+==115784== Use --track-origins=yes to see where uninitialised values come from
+==115784== For lists of detected and suppressed errors, rerun with: -s
+==115784== ERROR SUMMARY: 102 errors from 5 contexts (suppressed: 0 from 0)
+
+
+
+
+
+ Test 15 : 
+ 
+==115795== Memcheck, a memory error detector
+==115795== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==115795== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==115795== Command: ./s21_grep -cne 1 -cne E TestText1.txt TestText2.txt TestText3.txt
+==115795== 
+==115795== Conditional jump or move depends on uninitialised value(s)
+==115795==    at 0x48FF1F6: getdelim (iogetdelim.c:62)
+==115795==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115795== 
+==115795== Conditional jump or move depends on uninitialised value(s)
+==115795==    at 0x109906: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115795== 
+==115795== Conditional jump or move depends on uninitialised value(s)
+==115795==    at 0x109999: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115795== 
+==115795== Conditional jump or move depends on uninitialised value(s)
+==115795==    at 0x1099B0: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115795== 
+==115795== Conditional jump or move depends on uninitialised value(s)
+==115795==    at 0x109AE8: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115795== 
+==115795== Conditional jump or move depends on uninitialised value(s)
+==115795==    at 0x109B28: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115795== 
+TestText1.txt:1
+TestText2.txt:0
+TestText3.txt:3
+==115795== 
+==115795== HEAP SUMMARY:
+==115795==     in use at exit: 1,536 bytes in 4 blocks
+==115795==   total heap usage: 11 allocs, 7 frees, 18,024 bytes allocated
+==115795== 
+==115795== 120 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==115795==    at 0x48457A8: malloc (vg_replace_malloc.c:446)
+==115795==    by 0x48FF39D: getdelim (iogetdelim.c:65)
+==115795==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115795== 
+==115795== LEAK SUMMARY:
+==115795==    definitely lost: 120 bytes in 1 blocks
+==115795==    indirectly lost: 0 bytes in 0 blocks
+==115795==      possibly lost: 0 bytes in 0 blocks
+==115795==    still reachable: 1,416 bytes in 3 blocks
+==115795==         suppressed: 0 bytes in 0 blocks
+==115795== Reachable blocks (those to which a pointer was found) are not shown.
+==115795== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==115795== 
+==115795== Use --track-origins=yes to see where uninitialised values come from
+==115795== For lists of detected and suppressed errors, rerun with: -s
+==115795== ERROR SUMMARY: 107 errors from 7 contexts (suppressed: 0 from 0)
+
+
+
+
+
+ Test 16 : 
+ 
+==115805== Memcheck, a memory error detector
+==115805== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==115805== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==115805== Command: ./s21_grep -lne 1 -lne E TestText1.txt TestText2.txt TestText3.txt
+==115805== 
+==115805== Conditional jump or move depends on uninitialised value(s)
+==115805==    at 0x48FF1F6: getdelim (iogetdelim.c:62)
+==115805==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115805== 
+==115805== Conditional jump or move depends on uninitialised value(s)
+==115805==    at 0x109906: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115805== 
+==115805== Conditional jump or move depends on uninitialised value(s)
+==115805==    at 0x109999: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115805== 
+==115805== Conditional jump or move depends on uninitialised value(s)
+==115805==    at 0x1099C3: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115805== 
+==115805== Conditional jump or move depends on uninitialised value(s)
+==115805==    at 0x1099B0: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115805== 
+TestText1.txt
+TestText3.txt
+==115805== 
+==115805== HEAP SUMMARY:
+==115805==     in use at exit: 1,536 bytes in 4 blocks
+==115805==   total heap usage: 11 allocs, 7 frees, 18,024 bytes allocated
+==115805== 
+==115805== 120 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==115805==    at 0x48457A8: malloc (vg_replace_malloc.c:446)
+==115805==    by 0x48FF39D: getdelim (iogetdelim.c:65)
+==115805==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115805== 
+==115805== LEAK SUMMARY:
+==115805==    definitely lost: 120 bytes in 1 blocks
+==115805==    indirectly lost: 0 bytes in 0 blocks
+==115805==      possibly lost: 0 bytes in 0 blocks
+==115805==    still reachable: 1,416 bytes in 3 blocks
+==115805==         suppressed: 0 bytes in 0 blocks
+==115805== Reachable blocks (those to which a pointer was found) are not shown.
+==115805== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==115805== 
+==115805== Use --track-origins=yes to see where uninitialised values come from
+==115805== For lists of detected and suppressed errors, rerun with: -s
+==115805== ERROR SUMMARY: 106 errors from 6 contexts (suppressed: 0 from 0)
+
+
+
+
+
+ Test 17 : 
+ 
+==115817== Memcheck, a memory error detector
+==115817== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==115817== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==115817== Command: ./s21_grep -he 1 -he E TestText1.txt TestText2.txt TestText3.txt
+==115817== 
+==115817== Conditional jump or move depends on uninitialised value(s)
+==115817==    at 0x48FF1F6: getdelim (iogetdelim.c:62)
+==115817==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115817== 
+==115817== Conditional jump or move depends on uninitialised value(s)
+==115817==    at 0x109906: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115817== 
+==115817== Conditional jump or move depends on uninitialised value(s)
+==115817==    at 0x109999: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115817== 
+==115817== Conditional jump or move depends on uninitialised value(s)
+==115817==    at 0x1099C3: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115817== 
+==115817== Conditional jump or move depends on uninitialised value(s)
+==115817==    at 0x1099D2: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115817== 
+==115817== Conditional jump or move depends on uninitialised value(s)
+==115817==    at 0x109A30: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115817== 
+==115817== Conditional jump or move depends on uninitialised value(s)
+==115817==    at 0x109A54: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115817== 
+==115817== Conditional jump or move depends on uninitialised value(s)
+==115817==    at 0x1099B0: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115817== 
+==115817== Conditional jump or move depends on uninitialised value(s)
+==115817==    at 0x109AE8: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115817== 
+==115817== Conditional jump or move depends on uninitialised value(s)
+==115817==    at 0x109B28: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115817== 
+==115817== Conditional jump or move depends on uninitialised value(s)
+==115817==    at 0x109B37: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115817== 
+123   456
+ Three filEs 
+   175
+751
+==115817== 
+==115817== HEAP SUMMARY:
+==115817==     in use at exit: 1,536 bytes in 4 blocks
+==115817==   total heap usage: 11 allocs, 7 frees, 18,024 bytes allocated
+==115817== 
+==115817== 120 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==115817==    at 0x48457A8: malloc (vg_replace_malloc.c:446)
+==115817==    by 0x48FF39D: getdelim (iogetdelim.c:65)
+==115817==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115817== 
+==115817== LEAK SUMMARY:
+==115817==    definitely lost: 120 bytes in 1 blocks
+==115817==    indirectly lost: 0 bytes in 0 blocks
+==115817==      possibly lost: 0 bytes in 0 blocks
+==115817==    still reachable: 1,416 bytes in 3 blocks
+==115817==         suppressed: 0 bytes in 0 blocks
+==115817== Reachable blocks (those to which a pointer was found) are not shown.
+==115817== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==115817== 
+==115817== Use --track-origins=yes to see where uninitialised values come from
+==115817== For lists of detected and suppressed errors, rerun with: -s
+==115817== ERROR SUMMARY: 126 errors from 12 contexts (suppressed: 0 from 0)
+
+
+
+
+
+ Test 18 : 
+ 
+==115832== Memcheck, a memory error detector
+==115832== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==115832== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==115832== Command: ./s21_grep -hie 1 -hie E TestText1.txt TestText2.txt TestText3.txt
+==115832== 
+==115832== Conditional jump or move depends on uninitialised value(s)
+==115832==    at 0x48FF1F6: getdelim (iogetdelim.c:62)
+==115832==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115832== 
+==115832== Conditional jump or move depends on uninitialised value(s)
+==115832==    at 0x109999: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115832== 
+==115832== Conditional jump or move depends on uninitialised value(s)
+==115832==    at 0x1099C3: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115832== 
+==115832== Conditional jump or move depends on uninitialised value(s)
+==115832==    at 0x1099D2: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115832== 
+==115832== Conditional jump or move depends on uninitialised value(s)
+==115832==    at 0x109A30: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115832== 
+==115832== Conditional jump or move depends on uninitialised value(s)
+==115832==    at 0x109A54: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115832== 
+==115832== Conditional jump or move depends on uninitialised value(s)
+==115832==    at 0x1099B0: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115832== 
+==115832== Conditional jump or move depends on uninitialised value(s)
+==115832==    at 0x109AE8: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115832== 
+==115832== Conditional jump or move depends on uninitialised value(s)
+==115832==    at 0x109B28: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115832== 
+==115832== Conditional jump or move depends on uninitialised value(s)
+==115832==    at 0x109B37: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115832== 
+123   456
+e
+two files   456
+ three files 
+   175
+751
+hello world
+this is a test
+another lines
+==115832== 
+==115832== HEAP SUMMARY:
+==115832==     in use at exit: 1,536 bytes in 4 blocks
+==115832==   total heap usage: 11 allocs, 7 frees, 18,024 bytes allocated
+==115832== 
+==115832== 120 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==115832==    at 0x48457A8: malloc (vg_replace_malloc.c:446)
+==115832==    by 0x48FF39D: getdelim (iogetdelim.c:65)
+==115832==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115832== 
+==115832== LEAK SUMMARY:
+==115832==    definitely lost: 120 bytes in 1 blocks
+==115832==    indirectly lost: 0 bytes in 0 blocks
+==115832==      possibly lost: 0 bytes in 0 blocks
+==115832==    still reachable: 1,416 bytes in 3 blocks
+==115832==         suppressed: 0 bytes in 0 blocks
+==115832== Reachable blocks (those to which a pointer was found) are not shown.
+==115832== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==115832== 
+==115832== Use --track-origins=yes to see where uninitialised values come from
+==115832== For lists of detected and suppressed errors, rerun with: -s
+==115832== ERROR SUMMARY: 97 errors from 11 contexts (suppressed: 0 from 0)
+
+
+
+
+
+ Test 19 : 
+ 
+==115841== Memcheck, a memory error detector
+==115841== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==115841== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==115841== Command: ./s21_grep -hive 1 -hive E TestText1.txt TestText2.txt TestText3.txt
+==115841== 
+==115841== Conditional jump or move depends on uninitialised value(s)
+==115841==    at 0x48FF1F6: getdelim (iogetdelim.c:62)
+==115841==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115841== 
+==115841== Conditional jump or move depends on uninitialised value(s)
+==115841==    at 0x1099C3: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115841== 
+==115841== Conditional jump or move depends on uninitialised value(s)
+==115841==    at 0x1099D2: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115841== 
+==115841== Conditional jump or move depends on uninitialised value(s)
+==115841==    at 0x109A30: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115841== 
+==115841== Conditional jump or move depends on uninitialised value(s)
+==115841==    at 0x109A54: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115841== 
+==115841== Conditional jump or move depends on uninitialised value(s)
+==115841==    at 0x109AE8: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115841== 
+==115841== Conditional jump or move depends on uninitialised value(s)
+==115841==    at 0x109B28: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115841== 
+==115841== Conditional jump or move depends on uninitialised value(s)
+==115841==    at 0x109B37: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115841== 
+123   456
+t
+t
+is
+is
+e
+789
+789
+two files   456
+
+
+t
+t
+
+
+
+
+789
+789
+
+
+
+
+
+
+ three files 
+ 
+ 
+   175
+
+
+
+
+
+
+
+
+751
+hello world
+this is a test
+another lines
+==115841== 
+==115841== HEAP SUMMARY:
+==115841==     in use at exit: 1,536 bytes in 4 blocks
+==115841==   total heap usage: 11 allocs, 7 frees, 18,024 bytes allocated
+==115841== 
+==115841== 120 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==115841==    at 0x48457A8: malloc (vg_replace_malloc.c:446)
+==115841==    by 0x48FF39D: getdelim (iogetdelim.c:65)
+==115841==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115841== 
+==115841== LEAK SUMMARY:
+==115841==    definitely lost: 120 bytes in 1 blocks
+==115841==    indirectly lost: 0 bytes in 0 blocks
+==115841==      possibly lost: 0 bytes in 0 blocks
+==115841==    still reachable: 1,416 bytes in 3 blocks
+==115841==         suppressed: 0 bytes in 0 blocks
+==115841== Reachable blocks (those to which a pointer was found) are not shown.
+==115841== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==115841== 
+==115841== Use --track-origins=yes to see where uninitialised values come from
+==115841== For lists of detected and suppressed errors, rerun with: -s
+==115841== ERROR SUMMARY: 175 errors from 9 contexts (suppressed: 0 from 0)
+
+
+
+
+
+ Test 20 : 
+ 
+==115853== Memcheck, a memory error detector
+==115853== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==115853== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==115853== Command: ./s21_grep -hice 1 -hice E TestText1.txt TestText2.txt TestText3.txt
+==115853== 
+==115853== Conditional jump or move depends on uninitialised value(s)
+==115853==    at 0x48FF1F6: getdelim (iogetdelim.c:62)
+==115853==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115853== 
+==115853== Conditional jump or move depends on uninitialised value(s)
+==115853==    at 0x109999: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115853== 
+==115853== Conditional jump or move depends on uninitialised value(s)
+==115853==    at 0x1099B0: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115853== 
+==115853== Conditional jump or move depends on uninitialised value(s)
+==115853==    at 0x109AE8: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115853== 
+==115853== Conditional jump or move depends on uninitialised value(s)
+==115853==    at 0x109B28: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115853== 
+TestText1.txt:2
+TestText2.txt:1
+TestText3.txt:6
+==115853== 
+==115853== HEAP SUMMARY:
+==115853==     in use at exit: 1,536 bytes in 4 blocks
+==115853==   total heap usage: 11 allocs, 7 frees, 18,024 bytes allocated
+==115853== 
+==115853== 120 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==115853==    at 0x48457A8: malloc (vg_replace_malloc.c:446)
+==115853==    by 0x48FF39D: getdelim (iogetdelim.c:65)
+==115853==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115853== 
+==115853== LEAK SUMMARY:
+==115853==    definitely lost: 120 bytes in 1 blocks
+==115853==    indirectly lost: 0 bytes in 0 blocks
+==115853==      possibly lost: 0 bytes in 0 blocks
+==115853==    still reachable: 1,416 bytes in 3 blocks
+==115853==         suppressed: 0 bytes in 0 blocks
+==115853== Reachable blocks (those to which a pointer was found) are not shown.
+==115853== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==115853== 
+==115853== Use --track-origins=yes to see where uninitialised values come from
+==115853== For lists of detected and suppressed errors, rerun with: -s
+==115853== ERROR SUMMARY: 58 errors from 6 contexts (suppressed: 0 from 0)
+
+
+
+
+
+ Test 21 : 
+ 
+==115862== Memcheck, a memory error detector
+==115862== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==115862== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==115862== Command: ./s21_grep -hile 1 -hile E TestText1.txt TestText2.txt TestText3.txt
+==115862== 
+==115862== Conditional jump or move depends on uninitialised value(s)
+==115862==    at 0x48FF1F6: getdelim (iogetdelim.c:62)
+==115862==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115862== 
+==115862== Conditional jump or move depends on uninitialised value(s)
+==115862==    at 0x109999: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115862== 
+==115862== Conditional jump or move depends on uninitialised value(s)
+==115862==    at 0x1099C3: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115862== 
+==115862== Conditional jump or move depends on uninitialised value(s)
+==115862==    at 0x1099B0: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115862== 
+TestText1.txt
+TestText2.txt
+TestText3.txt
+==115862== 
+==115862== HEAP SUMMARY:
+==115862==     in use at exit: 1,536 bytes in 4 blocks
+==115862==   total heap usage: 11 allocs, 7 frees, 18,024 bytes allocated
+==115862== 
+==115862== 120 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==115862==    at 0x48457A8: malloc (vg_replace_malloc.c:446)
+==115862==    by 0x48FF39D: getdelim (iogetdelim.c:65)
+==115862==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115862== 
+==115862== LEAK SUMMARY:
+==115862==    definitely lost: 120 bytes in 1 blocks
+==115862==    indirectly lost: 0 bytes in 0 blocks
+==115862==      possibly lost: 0 bytes in 0 blocks
+==115862==    still reachable: 1,416 bytes in 3 blocks
+==115862==         suppressed: 0 bytes in 0 blocks
+==115862== Reachable blocks (those to which a pointer was found) are not shown.
+==115862== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==115862== 
+==115862== Use --track-origins=yes to see where uninitialised values come from
+==115862== For lists of detected and suppressed errors, rerun with: -s
+==115862== ERROR SUMMARY: 61 errors from 5 contexts (suppressed: 0 from 0)
+
+
+
+
+
+ Test 22 : 
+ 
+==115873== Memcheck, a memory error detector
+==115873== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==115873== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==115873== Command: ./s21_grep -hine 1 -hine E TestText1.txt TestText2.txt TestText3.txt
+==115873== 
+==115873== Conditional jump or move depends on uninitialised value(s)
+==115873==    at 0x48FF1F6: getdelim (iogetdelim.c:62)
+==115873==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115873== 
+==115873== Conditional jump or move depends on uninitialised value(s)
+==115873==    at 0x109999: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115873== 
+==115873== Conditional jump or move depends on uninitialised value(s)
+==115873==    at 0x1099C3: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115873== 
+==115873== Conditional jump or move depends on uninitialised value(s)
+==115873==    at 0x1099D2: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115873== 
+==115873== Conditional jump or move depends on uninitialised value(s)
+==115873==    at 0x109A54: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115873== 
+==115873== Conditional jump or move depends on uninitialised value(s)
+==115873==    at 0x1099B0: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115873== 
+==115873== Conditional jump or move depends on uninitialised value(s)
+==115873==    at 0x109AE8: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115873== 
+==115873== Conditional jump or move depends on uninitialised value(s)
+==115873==    at 0x109B28: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115873== 
+==115873== Conditional jump or move depends on uninitialised value(s)
+==115873==    at 0x109B37: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115873== 
+1:123   456
+4:e
+1:two files   456
+4: three files 
+6:   175
+11:751
+12:hello world
+13:this is a test
+14:another lines
+==115873== 
+==115873== HEAP SUMMARY:
+==115873==     in use at exit: 1,536 bytes in 4 blocks
+==115873==   total heap usage: 11 allocs, 7 frees, 18,024 bytes allocated
+==115873== 
+==115873== 120 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==115873==    at 0x48457A8: malloc (vg_replace_malloc.c:446)
+==115873==    by 0x48FF39D: getdelim (iogetdelim.c:65)
+==115873==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115873== 
+==115873== LEAK SUMMARY:
+==115873==    definitely lost: 120 bytes in 1 blocks
+==115873==    indirectly lost: 0 bytes in 0 blocks
+==115873==      possibly lost: 0 bytes in 0 blocks
+==115873==    still reachable: 1,416 bytes in 3 blocks
+==115873==         suppressed: 0 bytes in 0 blocks
+==115873== Reachable blocks (those to which a pointer was found) are not shown.
+==115873== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==115873== 
+==115873== Use --track-origins=yes to see where uninitialised values come from
+==115873== For lists of detected and suppressed errors, rerun with: -s
+==115873== ERROR SUMMARY: 88 errors from 10 contexts (suppressed: 0 from 0)
+
+
+
+
+
+ Test 23 : 
+ 
+==115884== Memcheck, a memory error detector
+==115884== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==115884== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==115884== Command: ./s21_grep -se 1 -se E TestText1.txt TestText2.txt TestText3.txt
+==115884== 
+==115884== Conditional jump or move depends on uninitialised value(s)
+==115884==    at 0x48FF1F6: getdelim (iogetdelim.c:62)
+==115884==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115884== 
+==115884== Conditional jump or move depends on uninitialised value(s)
+==115884==    at 0x109906: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115884== 
+==115884== Conditional jump or move depends on uninitialised value(s)
+==115884==    at 0x109999: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115884== 
+==115884== Conditional jump or move depends on uninitialised value(s)
+==115884==    at 0x1099C3: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115884== 
+==115884== Conditional jump or move depends on uninitialised value(s)
+==115884==    at 0x1099D2: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115884== 
+==115884== Conditional jump or move depends on uninitialised value(s)
+==115884==    at 0x1099E1: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115884== 
+==115884== Conditional jump or move depends on uninitialised value(s)
+==115884==    at 0x109A30: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115884== 
+==115884== Conditional jump or move depends on uninitialised value(s)
+==115884==    at 0x109A54: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115884== 
+==115884== Conditional jump or move depends on uninitialised value(s)
+==115884==    at 0x1099B0: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115884== 
+==115884== Conditional jump or move depends on uninitialised value(s)
+==115884==    at 0x109AE8: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115884== 
+==115884== Conditional jump or move depends on uninitialised value(s)
+==115884==    at 0x109B28: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115884== 
+==115884== Conditional jump or move depends on uninitialised value(s)
+==115884==    at 0x109B37: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115884== 
+TestText1.txt:123   456
+TestText3.txt: Three filEs 
+TestText3.txt:   175
+TestText3.txt:751
+==115884== 
+==115884== HEAP SUMMARY:
+==115884==     in use at exit: 1,536 bytes in 4 blocks
+==115884==   total heap usage: 11 allocs, 7 frees, 18,024 bytes allocated
+==115884== 
+==115884== 120 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==115884==    at 0x48457A8: malloc (vg_replace_malloc.c:446)
+==115884==    by 0x48FF39D: getdelim (iogetdelim.c:65)
+==115884==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115884== 
+==115884== LEAK SUMMARY:
+==115884==    definitely lost: 120 bytes in 1 blocks
+==115884==    indirectly lost: 0 bytes in 0 blocks
+==115884==      possibly lost: 0 bytes in 0 blocks
+==115884==    still reachable: 1,416 bytes in 3 blocks
+==115884==         suppressed: 0 bytes in 0 blocks
+==115884== Reachable blocks (those to which a pointer was found) are not shown.
+==115884== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==115884== 
+==115884== Use --track-origins=yes to see where uninitialised values come from
+==115884== For lists of detected and suppressed errors, rerun with: -s
+==115884== ERROR SUMMARY: 130 errors from 13 contexts (suppressed: 0 from 0)
+
+
+
+
+
+ Test 24 : 
+ 
+==115893== Memcheck, a memory error detector
+==115893== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==115893== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==115893== Command: ./s21_grep -sie 1 -sie E TestText1.txt TestText2.txt TestText3.txt
+==115893== 
+==115893== Conditional jump or move depends on uninitialised value(s)
+==115893==    at 0x48FF1F6: getdelim (iogetdelim.c:62)
+==115893==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115893== 
+==115893== Conditional jump or move depends on uninitialised value(s)
+==115893==    at 0x109999: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115893== 
+==115893== Conditional jump or move depends on uninitialised value(s)
+==115893==    at 0x1099C3: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115893== 
+==115893== Conditional jump or move depends on uninitialised value(s)
+==115893==    at 0x1099D2: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115893== 
+==115893== Conditional jump or move depends on uninitialised value(s)
+==115893==    at 0x1099E1: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115893== 
+==115893== Conditional jump or move depends on uninitialised value(s)
+==115893==    at 0x109A30: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115893== 
+==115893== Conditional jump or move depends on uninitialised value(s)
+==115893==    at 0x109A54: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115893== 
+==115893== Conditional jump or move depends on uninitialised value(s)
+==115893==    at 0x1099B0: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115893== 
+==115893== Conditional jump or move depends on uninitialised value(s)
+==115893==    at 0x109AE8: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115893== 
+==115893== Conditional jump or move depends on uninitialised value(s)
+==115893==    at 0x109B28: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115893== 
+==115893== Conditional jump or move depends on uninitialised value(s)
+==115893==    at 0x109B37: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115893== 
+TestText1.txt:123   456
+TestText1.txt:e
+TestText2.txt:two files   456
+TestText3.txt: three files 
+TestText3.txt:   175
+TestText3.txt:751
+TestText3.txt:hello world
+TestText3.txt:this is a test
+TestText3.txt:another lines
+==115893== 
+==115893== HEAP SUMMARY:
+==115893==     in use at exit: 1,536 bytes in 4 blocks
+==115893==   total heap usage: 11 allocs, 7 frees, 18,024 bytes allocated
+==115893== 
+==115893== 120 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==115893==    at 0x48457A8: malloc (vg_replace_malloc.c:446)
+==115893==    by 0x48FF39D: getdelim (iogetdelim.c:65)
+==115893==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115893== 
+==115893== LEAK SUMMARY:
+==115893==    definitely lost: 120 bytes in 1 blocks
+==115893==    indirectly lost: 0 bytes in 0 blocks
+==115893==      possibly lost: 0 bytes in 0 blocks
+==115893==    still reachable: 1,416 bytes in 3 blocks
+==115893==         suppressed: 0 bytes in 0 blocks
+==115893== Reachable blocks (those to which a pointer was found) are not shown.
+==115893== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==115893== 
+==115893== Use --track-origins=yes to see where uninitialised values come from
+==115893== For lists of detected and suppressed errors, rerun with: -s
+==115893== ERROR SUMMARY: 106 errors from 12 contexts (suppressed: 0 from 0)
+
+
+
+
+
+ Test 25 : 
+ 
+==115904== Memcheck, a memory error detector
+==115904== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==115904== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==115904== Command: ./s21_grep -sive 1 -sive E TestText1.txt TestText2.txt TestText3.txt
+==115904== 
+==115904== Conditional jump or move depends on uninitialised value(s)
+==115904==    at 0x48FF1F6: getdelim (iogetdelim.c:62)
+==115904==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115904== 
+==115904== Conditional jump or move depends on uninitialised value(s)
+==115904==    at 0x1099C3: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115904== 
+==115904== Conditional jump or move depends on uninitialised value(s)
+==115904==    at 0x1099D2: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115904== 
+==115904== Conditional jump or move depends on uninitialised value(s)
+==115904==    at 0x1099E1: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115904== 
+==115904== Conditional jump or move depends on uninitialised value(s)
+==115904==    at 0x109A30: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115904== 
+==115904== Conditional jump or move depends on uninitialised value(s)
+==115904==    at 0x109A54: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115904== 
+==115904== Conditional jump or move depends on uninitialised value(s)
+==115904==    at 0x109AE8: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115904== 
+==115904== Conditional jump or move depends on uninitialised value(s)
+==115904==    at 0x109B28: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115904== 
+==115904== Conditional jump or move depends on uninitialised value(s)
+==115904==    at 0x109B37: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115904== 
+TestText1.txt:123   456
+TestText1.txt:t
+TestText1.txt:t
+TestText1.txt:is
+TestText1.txt:is
+TestText1.txt:e
+TestText1.txt:789
+TestText1.txt:789
+TestText2.txt:two files   456
+TestText2.txt:
+TestText2.txt:
+TestText2.txt:t
+TestText2.txt:t
+TestText2.txt:
+TestText2.txt:
+TestText2.txt:
+TestText2.txt:
+TestText2.txt:789
+TestText2.txt:789
+TestText3.txt:
+TestText3.txt:
+TestText3.txt:
+TestText3.txt:
+TestText3.txt:
+TestText3.txt:
+TestText3.txt: three files 
+TestText3.txt: 
+TestText3.txt: 
+TestText3.txt:   175
+TestText3.txt:
+TestText3.txt:
+TestText3.txt:
+TestText3.txt:
+TestText3.txt:
+TestText3.txt:
+TestText3.txt:
+TestText3.txt:
+TestText3.txt:751
+TestText3.txt:hello world
+TestText3.txt:this is a test
+TestText3.txt:another lines
+==115904== 
+==115904== HEAP SUMMARY:
+==115904==     in use at exit: 1,536 bytes in 4 blocks
+==115904==   total heap usage: 11 allocs, 7 frees, 18,024 bytes allocated
+==115904== 
+==115904== 120 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==115904==    at 0x48457A8: malloc (vg_replace_malloc.c:446)
+==115904==    by 0x48FF39D: getdelim (iogetdelim.c:65)
+==115904==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115904== 
+==115904== LEAK SUMMARY:
+==115904==    definitely lost: 120 bytes in 1 blocks
+==115904==    indirectly lost: 0 bytes in 0 blocks
+==115904==      possibly lost: 0 bytes in 0 blocks
+==115904==    still reachable: 1,416 bytes in 3 blocks
+==115904==         suppressed: 0 bytes in 0 blocks
+==115904== Reachable blocks (those to which a pointer was found) are not shown.
+==115904== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==115904== 
+==115904== Use --track-origins=yes to see where uninitialised values come from
+==115904== For lists of detected and suppressed errors, rerun with: -s
+==115904== ERROR SUMMARY: 216 errors from 10 contexts (suppressed: 0 from 0)
+
+
+
+
+
+ Test 26 : 
+ 
+==115913== Memcheck, a memory error detector
+==115913== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==115913== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==115913== Command: ./s21_grep -sice 1 -sice E TestText1.txt TestText2.txt TestText3.txt
+==115913== 
+==115913== Conditional jump or move depends on uninitialised value(s)
+==115913==    at 0x48FF1F6: getdelim (iogetdelim.c:62)
+==115913==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115913== 
+==115913== Conditional jump or move depends on uninitialised value(s)
+==115913==    at 0x109999: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115913== 
+==115913== Conditional jump or move depends on uninitialised value(s)
+==115913==    at 0x1099B0: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115913== 
+==115913== Conditional jump or move depends on uninitialised value(s)
+==115913==    at 0x109AE8: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115913== 
+==115913== Conditional jump or move depends on uninitialised value(s)
+==115913==    at 0x109B28: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115913== 
+TestText1.txt:2
+TestText2.txt:1
+TestText3.txt:6
+==115913== 
+==115913== HEAP SUMMARY:
+==115913==     in use at exit: 1,536 bytes in 4 blocks
+==115913==   total heap usage: 11 allocs, 7 frees, 18,024 bytes allocated
+==115913== 
+==115913== 120 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==115913==    at 0x48457A8: malloc (vg_replace_malloc.c:446)
+==115913==    by 0x48FF39D: getdelim (iogetdelim.c:65)
+==115913==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115913== 
+==115913== LEAK SUMMARY:
+==115913==    definitely lost: 120 bytes in 1 blocks
+==115913==    indirectly lost: 0 bytes in 0 blocks
+==115913==      possibly lost: 0 bytes in 0 blocks
+==115913==    still reachable: 1,416 bytes in 3 blocks
+==115913==         suppressed: 0 bytes in 0 blocks
+==115913== Reachable blocks (those to which a pointer was found) are not shown.
+==115913== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==115913== 
+==115913== Use --track-origins=yes to see where uninitialised values come from
+==115913== For lists of detected and suppressed errors, rerun with: -s
+==115913== ERROR SUMMARY: 58 errors from 6 contexts (suppressed: 0 from 0)
+
+
+
+
+
+ Test 27 : 
+ 
+==115926== Memcheck, a memory error detector
+==115926== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==115926== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==115926== Command: ./s21_grep -sile 1 -sile E TestText1.txt TestText2.txt TestText3.txt
+==115926== 
+==115926== Conditional jump or move depends on uninitialised value(s)
+==115926==    at 0x48FF1F6: getdelim (iogetdelim.c:62)
+==115926==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115926== 
+==115926== Conditional jump or move depends on uninitialised value(s)
+==115926==    at 0x109999: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115926== 
+==115926== Conditional jump or move depends on uninitialised value(s)
+==115926==    at 0x1099C3: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115926== 
+==115926== Conditional jump or move depends on uninitialised value(s)
+==115926==    at 0x1099B0: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115926== 
+TestText1.txt
+TestText2.txt
+TestText3.txt
+==115926== 
+==115926== HEAP SUMMARY:
+==115926==     in use at exit: 1,536 bytes in 4 blocks
+==115926==   total heap usage: 11 allocs, 7 frees, 18,024 bytes allocated
+==115926== 
+==115926== 120 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==115926==    at 0x48457A8: malloc (vg_replace_malloc.c:446)
+==115926==    by 0x48FF39D: getdelim (iogetdelim.c:65)
+==115926==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115926== 
+==115926== LEAK SUMMARY:
+==115926==    definitely lost: 120 bytes in 1 blocks
+==115926==    indirectly lost: 0 bytes in 0 blocks
+==115926==      possibly lost: 0 bytes in 0 blocks
+==115926==    still reachable: 1,416 bytes in 3 blocks
+==115926==         suppressed: 0 bytes in 0 blocks
+==115926== Reachable blocks (those to which a pointer was found) are not shown.
+==115926== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==115926== 
+==115926== Use --track-origins=yes to see where uninitialised values come from
+==115926== For lists of detected and suppressed errors, rerun with: -s
+==115926== ERROR SUMMARY: 61 errors from 5 contexts (suppressed: 0 from 0)
+
+
+
+
+
+ Test 28 : 
+ 
+==115937== Memcheck, a memory error detector
+==115937== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==115937== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==115937== Command: ./s21_grep -sine 1 -sine E TestText1.txt TestText2.txt TestText3.txt
+==115937== 
+==115937== Conditional jump or move depends on uninitialised value(s)
+==115937==    at 0x48FF1F6: getdelim (iogetdelim.c:62)
+==115937==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115937== 
+==115937== Conditional jump or move depends on uninitialised value(s)
+==115937==    at 0x109999: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115937== 
+==115937== Conditional jump or move depends on uninitialised value(s)
+==115937==    at 0x1099C3: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115937== 
+==115937== Conditional jump or move depends on uninitialised value(s)
+==115937==    at 0x1099D2: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115937== 
+==115937== Conditional jump or move depends on uninitialised value(s)
+==115937==    at 0x1099E1: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115937== 
+==115937== Conditional jump or move depends on uninitialised value(s)
+==115937==    at 0x109A54: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115937== 
+==115937== Conditional jump or move depends on uninitialised value(s)
+==115937==    at 0x1099B0: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115937== 
+==115937== Conditional jump or move depends on uninitialised value(s)
+==115937==    at 0x109AE8: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115937== 
+==115937== Conditional jump or move depends on uninitialised value(s)
+==115937==    at 0x109B28: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115937== 
+==115937== Conditional jump or move depends on uninitialised value(s)
+==115937==    at 0x109B37: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115937== 
+TestText1.txt:1:123   456
+TestText1.txt:4:e
+TestText2.txt:1:two files   456
+TestText3.txt:4: three files 
+TestText3.txt:6:   175
+TestText3.txt:11:751
+TestText3.txt:12:hello world
+TestText3.txt:13:this is a test
+TestText3.txt:14:another lines
+==115937== 
+==115937== HEAP SUMMARY:
+==115937==     in use at exit: 1,536 bytes in 4 blocks
+==115937==   total heap usage: 11 allocs, 7 frees, 18,024 bytes allocated
+==115937== 
+==115937== 120 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==115937==    at 0x48457A8: malloc (vg_replace_malloc.c:446)
+==115937==    by 0x48FF39D: getdelim (iogetdelim.c:65)
+==115937==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115937== 
+==115937== LEAK SUMMARY:
+==115937==    definitely lost: 120 bytes in 1 blocks
+==115937==    indirectly lost: 0 bytes in 0 blocks
+==115937==      possibly lost: 0 bytes in 0 blocks
+==115937==    still reachable: 1,416 bytes in 3 blocks
+==115937==         suppressed: 0 bytes in 0 blocks
+==115937== Reachable blocks (those to which a pointer was found) are not shown.
+==115937== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==115937== 
+==115937== Use --track-origins=yes to see where uninitialised values come from
+==115937== For lists of detected and suppressed errors, rerun with: -s
+==115937== ERROR SUMMARY: 97 errors from 11 contexts (suppressed: 0 from 0)
+
+
+
+
+
+ Test 29 : 
+ 
+==115957== Memcheck, a memory error detector
+==115957== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==115957== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==115957== Command: ./s21_grep -hf 1 -hf E TestText1.txt TestText2.txt TestText3.txt
+==115957== 
+==115957== Conditional jump or move depends on uninitialised value(s)
+==115957==    at 0x10983E: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115957== 
+==115957== Conditional jump or move depends on uninitialised value(s)
+==115957==    at 0x109886: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115957== 
+==115957== Conditional jump or move depends on uninitialised value(s)
+==115957==    at 0x109B8F: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115957== 
+==115957== Conditional jump or move depends on uninitialised value(s)
+==115957==    at 0x48FF1F6: getdelim (iogetdelim.c:62)
+==115957==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115957== 
+==115957== Conditional jump or move depends on uninitialised value(s)
+==115957==    at 0x109B28: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115957== 
+==115957== Conditional jump or move depends on uninitialised value(s)
+==115957==    at 0x109B37: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115957== 
+grep: 1: No such file or directory
+grep: E: No such file or directory
+==115957== 
+==115957== HEAP SUMMARY:
+==115957==     in use at exit: 1,536 bytes in 4 blocks
+==115957==   total heap usage: 13 allocs, 9 frees, 18,968 bytes allocated
+==115957== 
+==115957== 120 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==115957==    at 0x48457A8: malloc (vg_replace_malloc.c:446)
+==115957==    by 0x48FF39D: getdelim (iogetdelim.c:65)
+==115957==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115957== 
+==115957== LEAK SUMMARY:
+==115957==    definitely lost: 120 bytes in 1 blocks
+==115957==    indirectly lost: 0 bytes in 0 blocks
+==115957==      possibly lost: 0 bytes in 0 blocks
+==115957==    still reachable: 1,416 bytes in 3 blocks
+==115957==         suppressed: 0 bytes in 0 blocks
+==115957== Reachable blocks (those to which a pointer was found) are not shown.
+==115957== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==115957== 
+==115957== Use --track-origins=yes to see where uninitialised values come from
+==115957== For lists of detected and suppressed errors, rerun with: -s
+==115957== ERROR SUMMARY: 16 errors from 7 contexts (suppressed: 0 from 0)
+
+
+
+
+
+ Test 30 : 
+ 
+==115971== Memcheck, a memory error detector
+==115971== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==115971== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==115971== Command: ./s21_grep -if 1 -if E TestText1.txt TestText2.txt TestText3.txt
+==115971== 
+==115971== Conditional jump or move depends on uninitialised value(s)
+==115971==    at 0x10983E: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115971== 
+==115971== Conditional jump or move depends on uninitialised value(s)
+==115971==    at 0x109886: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115971== 
+==115971== Conditional jump or move depends on uninitialised value(s)
+==115971==    at 0x109B8F: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115971== 
+==115971== Conditional jump or move depends on uninitialised value(s)
+==115971==    at 0x48FF1F6: getdelim (iogetdelim.c:62)
+==115971==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115971== 
+==115971== Conditional jump or move depends on uninitialised value(s)
+==115971==    at 0x109B28: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115971== 
+==115971== Conditional jump or move depends on uninitialised value(s)
+==115971==    at 0x109B37: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115971== 
+grep: 1: No such file or directory
+grep: E: No such file or directory
+==115971== 
+==115971== HEAP SUMMARY:
+==115971==     in use at exit: 1,536 bytes in 4 blocks
+==115971==   total heap usage: 13 allocs, 9 frees, 18,968 bytes allocated
+==115971== 
+==115971== 120 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==115971==    at 0x48457A8: malloc (vg_replace_malloc.c:446)
+==115971==    by 0x48FF39D: getdelim (iogetdelim.c:65)
+==115971==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115971== 
+==115971== LEAK SUMMARY:
+==115971==    definitely lost: 120 bytes in 1 blocks
+==115971==    indirectly lost: 0 bytes in 0 blocks
+==115971==      possibly lost: 0 bytes in 0 blocks
+==115971==    still reachable: 1,416 bytes in 3 blocks
+==115971==         suppressed: 0 bytes in 0 blocks
+==115971== Reachable blocks (those to which a pointer was found) are not shown.
+==115971== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==115971== 
+==115971== Use --track-origins=yes to see where uninitialised values come from
+==115971== For lists of detected and suppressed errors, rerun with: -s
+==115971== ERROR SUMMARY: 16 errors from 7 contexts (suppressed: 0 from 0)
+
+
+
+
+
+ Test 31 : 
+ 
+==115995== Memcheck, a memory error detector
+==115995== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==115995== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==115995== Command: ./s21_grep -ivf 1 -ivf E TestText1.txt TestText2.txt TestText3.txt
+==115995== 
+==115995== Conditional jump or move depends on uninitialised value(s)
+==115995==    at 0x10983E: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115995== 
+==115995== Conditional jump or move depends on uninitialised value(s)
+==115995==    at 0x109886: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115995== 
+==115995== Conditional jump or move depends on uninitialised value(s)
+==115995==    at 0x109B8F: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115995== 
+==115995== Conditional jump or move depends on uninitialised value(s)
+==115995==    at 0x48FF1F6: getdelim (iogetdelim.c:62)
+==115995==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115995== 
+==115995== Conditional jump or move depends on uninitialised value(s)
+==115995==    at 0x109B28: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115995== 
+==115995== Conditional jump or move depends on uninitialised value(s)
+==115995==    at 0x109B37: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115995== 
+grep: 1: No such file or directory
+grep: E: No such file or directory
+==115995== 
+==115995== HEAP SUMMARY:
+==115995==     in use at exit: 1,536 bytes in 4 blocks
+==115995==   total heap usage: 13 allocs, 9 frees, 18,968 bytes allocated
+==115995== 
+==115995== 120 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==115995==    at 0x48457A8: malloc (vg_replace_malloc.c:446)
+==115995==    by 0x48FF39D: getdelim (iogetdelim.c:65)
+==115995==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==115995== 
+==115995== LEAK SUMMARY:
+==115995==    definitely lost: 120 bytes in 1 blocks
+==115995==    indirectly lost: 0 bytes in 0 blocks
+==115995==      possibly lost: 0 bytes in 0 blocks
+==115995==    still reachable: 1,416 bytes in 3 blocks
+==115995==         suppressed: 0 bytes in 0 blocks
+==115995== Reachable blocks (those to which a pointer was found) are not shown.
+==115995== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==115995== 
+==115995== Use --track-origins=yes to see where uninitialised values come from
+==115995== For lists of detected and suppressed errors, rerun with: -s
+==115995== ERROR SUMMARY: 16 errors from 7 contexts (suppressed: 0 from 0)
+
+
+
+
+
+ Test 32 : 
+ 
+==116007== Memcheck, a memory error detector
+==116007== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==116007== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==116007== Command: ./s21_grep -hicf 1 -hicf E TestText1.txt TestText2.txt TestText3.txt
+==116007== 
+==116007== Conditional jump or move depends on uninitialised value(s)
+==116007==    at 0x10983E: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==116007== 
+==116007== Conditional jump or move depends on uninitialised value(s)
+==116007==    at 0x109886: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==116007== 
+==116007== Conditional jump or move depends on uninitialised value(s)
+==116007==    at 0x109B8F: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==116007== 
+==116007== Conditional jump or move depends on uninitialised value(s)
+==116007==    at 0x48FF1F6: getdelim (iogetdelim.c:62)
+==116007==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==116007== 
+==116007== Conditional jump or move depends on uninitialised value(s)
+==116007==    at 0x109B28: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==116007== 
+grep: 1: No such file or directory
+grep: E: No such file or directory
+TestText1.txt:0
+TestText2.txt:0
+TestText3.txt:0
+==116007== 
+==116007== HEAP SUMMARY:
+==116007==     in use at exit: 1,536 bytes in 4 blocks
+==116007==   total heap usage: 13 allocs, 9 frees, 18,968 bytes allocated
+==116007== 
+==116007== 120 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==116007==    at 0x48457A8: malloc (vg_replace_malloc.c:446)
+==116007==    by 0x48FF39D: getdelim (iogetdelim.c:65)
+==116007==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==116007== 
+==116007== LEAK SUMMARY:
+==116007==    definitely lost: 120 bytes in 1 blocks
+==116007==    indirectly lost: 0 bytes in 0 blocks
+==116007==      possibly lost: 0 bytes in 0 blocks
+==116007==    still reachable: 1,416 bytes in 3 blocks
+==116007==         suppressed: 0 bytes in 0 blocks
+==116007== Reachable blocks (those to which a pointer was found) are not shown.
+==116007== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==116007== 
+==116007== Use --track-origins=yes to see where uninitialised values come from
+==116007== For lists of detected and suppressed errors, rerun with: -s
+==116007== ERROR SUMMARY: 13 errors from 6 contexts (suppressed: 0 from 0)
+
+
+
+
+
+ Test 33 : 
+ 
+==116017== Memcheck, a memory error detector
+==116017== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==116017== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==116017== Command: ./s21_grep -ilf 1 -ilf E TestText1.txt TestText2.txt TestText3.txt
+==116017== 
+==116017== Conditional jump or move depends on uninitialised value(s)
+==116017==    at 0x10983E: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==116017== 
+==116017== Conditional jump or move depends on uninitialised value(s)
+==116017==    at 0x109886: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==116017== 
+==116017== Conditional jump or move depends on uninitialised value(s)
+==116017==    at 0x109B8F: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==116017== 
+==116017== Conditional jump or move depends on uninitialised value(s)
+==116017==    at 0x48FF1F6: getdelim (iogetdelim.c:62)
+==116017==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==116017== 
+grep: 1: No such file or directory
+grep: E: No such file or directory
+==116017== 
+==116017== HEAP SUMMARY:
+==116017==     in use at exit: 1,536 bytes in 4 blocks
+==116017==   total heap usage: 13 allocs, 9 frees, 18,968 bytes allocated
+==116017== 
+==116017== 120 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==116017==    at 0x48457A8: malloc (vg_replace_malloc.c:446)
+==116017==    by 0x48FF39D: getdelim (iogetdelim.c:65)
+==116017==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==116017== 
+==116017== LEAK SUMMARY:
+==116017==    definitely lost: 120 bytes in 1 blocks
+==116017==    indirectly lost: 0 bytes in 0 blocks
+==116017==      possibly lost: 0 bytes in 0 blocks
+==116017==    still reachable: 1,416 bytes in 3 blocks
+==116017==         suppressed: 0 bytes in 0 blocks
+==116017== Reachable blocks (those to which a pointer was found) are not shown.
+==116017== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==116017== 
+==116017== Use --track-origins=yes to see where uninitialised values come from
+==116017== For lists of detected and suppressed errors, rerun with: -s
+==116017== ERROR SUMMARY: 10 errors from 5 contexts (suppressed: 0 from 0)
+
+
+
+
+
+ Test 34 : 
+ 
+==116028== Memcheck, a memory error detector
+==116028== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==116028== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==116028== Command: ./s21_grep -hinf 1 -hinf E TestText1.txt TestText2.txt TestText3.txt
+==116028== 
+==116028== Conditional jump or move depends on uninitialised value(s)
+==116028==    at 0x10983E: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==116028== 
+==116028== Conditional jump or move depends on uninitialised value(s)
+==116028==    at 0x109886: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==116028== 
+==116028== Conditional jump or move depends on uninitialised value(s)
+==116028==    at 0x109B8F: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==116028== 
+==116028== Conditional jump or move depends on uninitialised value(s)
+==116028==    at 0x48FF1F6: getdelim (iogetdelim.c:62)
+==116028==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==116028== 
+==116028== Conditional jump or move depends on uninitialised value(s)
+==116028==    at 0x109B28: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==116028== 
+==116028== Conditional jump or move depends on uninitialised value(s)
+==116028==    at 0x109B37: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==116028== 
+grep: 1: No such file or directory
+grep: E: No such file or directory
+==116028== 
+==116028== HEAP SUMMARY:
+==116028==     in use at exit: 1,536 bytes in 4 blocks
+==116028==   total heap usage: 13 allocs, 9 frees, 18,968 bytes allocated
+==116028== 
+==116028== 120 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==116028==    at 0x48457A8: malloc (vg_replace_malloc.c:446)
+==116028==    by 0x48FF39D: getdelim (iogetdelim.c:65)
+==116028==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==116028== 
+==116028== LEAK SUMMARY:
+==116028==    definitely lost: 120 bytes in 1 blocks
+==116028==    indirectly lost: 0 bytes in 0 blocks
+==116028==      possibly lost: 0 bytes in 0 blocks
+==116028==    still reachable: 1,416 bytes in 3 blocks
+==116028==         suppressed: 0 bytes in 0 blocks
+==116028== Reachable blocks (those to which a pointer was found) are not shown.
+==116028== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==116028== 
+==116028== Use --track-origins=yes to see where uninitialised values come from
+==116028== For lists of detected and suppressed errors, rerun with: -s
+==116028== ERROR SUMMARY: 16 errors from 7 contexts (suppressed: 0 from 0)
+
+
+
+
+
+ Test 35 : 
+ 
+==116041== Memcheck, a memory error detector
+==116041== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==116041== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==116041== Command: ./s21_grep -of 1 -of E TestText1.txt TestText2.txt TestText3.txt
+==116041== 
+==116041== Conditional jump or move depends on uninitialised value(s)
+==116041==    at 0x10983E: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==116041== 
+==116041== Conditional jump or move depends on uninitialised value(s)
+==116041==    at 0x109886: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==116041== 
+==116041== Conditional jump or move depends on uninitialised value(s)
+==116041==    at 0x109B8F: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==116041== 
+==116041== Conditional jump or move depends on uninitialised value(s)
+==116041==    at 0x48FF1F6: getdelim (iogetdelim.c:62)
+==116041==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==116041== 
+==116041== Conditional jump or move depends on uninitialised value(s)
+==116041==    at 0x109B28: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==116041== 
+==116041== Conditional jump or move depends on uninitialised value(s)
+==116041==    at 0x109B37: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==116041== 
+grep: 1: No such file or directory
+grep: E: No such file or directory
+==116041== 
+==116041== HEAP SUMMARY:
+==116041==     in use at exit: 1,536 bytes in 4 blocks
+==116041==   total heap usage: 13 allocs, 9 frees, 18,968 bytes allocated
+==116041== 
+==116041== 120 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==116041==    at 0x48457A8: malloc (vg_replace_malloc.c:446)
+==116041==    by 0x48FF39D: getdelim (iogetdelim.c:65)
+==116041==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==116041== 
+==116041== LEAK SUMMARY:
+==116041==    definitely lost: 120 bytes in 1 blocks
+==116041==    indirectly lost: 0 bytes in 0 blocks
+==116041==      possibly lost: 0 bytes in 0 blocks
+==116041==    still reachable: 1,416 bytes in 3 blocks
+==116041==         suppressed: 0 bytes in 0 blocks
+==116041== Reachable blocks (those to which a pointer was found) are not shown.
+==116041== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==116041== 
+==116041== Use --track-origins=yes to see where uninitialised values come from
+==116041== For lists of detected and suppressed errors, rerun with: -s
+==116041== ERROR SUMMARY: 16 errors from 7 contexts (suppressed: 0 from 0)
+
+
+
+
+
+ Test 36 : 
+ 
+==116051== Memcheck, a memory error detector
+==116051== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==116051== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==116051== Command: ./s21_grep -iof 1 -iof E TestText1.txt TestText2.txt TestText3.txt
+==116051== 
+==116051== Conditional jump or move depends on uninitialised value(s)
+==116051==    at 0x10983E: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==116051== 
+==116051== Conditional jump or move depends on uninitialised value(s)
+==116051==    at 0x109886: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==116051== 
+==116051== Conditional jump or move depends on uninitialised value(s)
+==116051==    at 0x109B8F: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==116051== 
+==116051== Conditional jump or move depends on uninitialised value(s)
+==116051==    at 0x48FF1F6: getdelim (iogetdelim.c:62)
+==116051==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==116051== 
+==116051== Conditional jump or move depends on uninitialised value(s)
+==116051==    at 0x109B28: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==116051== 
+==116051== Conditional jump or move depends on uninitialised value(s)
+==116051==    at 0x109B37: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==116051== 
+grep: 1: No such file or directory
+grep: E: No such file or directory
+==116051== 
+==116051== HEAP SUMMARY:
+==116051==     in use at exit: 1,536 bytes in 4 blocks
+==116051==   total heap usage: 13 allocs, 9 frees, 18,968 bytes allocated
+==116051== 
+==116051== 120 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==116051==    at 0x48457A8: malloc (vg_replace_malloc.c:446)
+==116051==    by 0x48FF39D: getdelim (iogetdelim.c:65)
+==116051==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==116051== 
+==116051== LEAK SUMMARY:
+==116051==    definitely lost: 120 bytes in 1 blocks
+==116051==    indirectly lost: 0 bytes in 0 blocks
+==116051==      possibly lost: 0 bytes in 0 blocks
+==116051==    still reachable: 1,416 bytes in 3 blocks
+==116051==         suppressed: 0 bytes in 0 blocks
+==116051== Reachable blocks (those to which a pointer was found) are not shown.
+==116051== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==116051== 
+==116051== Use --track-origins=yes to see where uninitialised values come from
+==116051== For lists of detected and suppressed errors, rerun with: -s
+==116051== ERROR SUMMARY: 16 errors from 7 contexts (suppressed: 0 from 0)
+
+
+
+
+
+ Test 37 : 
+ 
+==116064== Memcheck, a memory error detector
+==116064== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==116064== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==116064== Command: ./s21_grep -hicof 1 -hicof E TestText1.txt TestText2.txt TestText3.txt
+==116064== 
+==116064== Conditional jump or move depends on uninitialised value(s)
+==116064==    at 0x10983E: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==116064== 
+==116064== Conditional jump or move depends on uninitialised value(s)
+==116064==    at 0x109886: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==116064== 
+==116064== Conditional jump or move depends on uninitialised value(s)
+==116064==    at 0x109B8F: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==116064== 
+==116064== Conditional jump or move depends on uninitialised value(s)
+==116064==    at 0x48FF1F6: getdelim (iogetdelim.c:62)
+==116064==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==116064== 
+==116064== Conditional jump or move depends on uninitialised value(s)
+==116064==    at 0x109B28: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==116064== 
+grep: 1: No such file or directory
+grep: E: No such file or directory
+TestText1.txt:0
+TestText2.txt:0
+TestText3.txt:0
+==116064== 
+==116064== HEAP SUMMARY:
+==116064==     in use at exit: 1,536 bytes in 4 blocks
+==116064==   total heap usage: 13 allocs, 9 frees, 18,968 bytes allocated
+==116064== 
+==116064== 120 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==116064==    at 0x48457A8: malloc (vg_replace_malloc.c:446)
+==116064==    by 0x48FF39D: getdelim (iogetdelim.c:65)
+==116064==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==116064== 
+==116064== LEAK SUMMARY:
+==116064==    definitely lost: 120 bytes in 1 blocks
+==116064==    indirectly lost: 0 bytes in 0 blocks
+==116064==      possibly lost: 0 bytes in 0 blocks
+==116064==    still reachable: 1,416 bytes in 3 blocks
+==116064==         suppressed: 0 bytes in 0 blocks
+==116064== Reachable blocks (those to which a pointer was found) are not shown.
+==116064== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==116064== 
+==116064== Use --track-origins=yes to see where uninitialised values come from
+==116064== For lists of detected and suppressed errors, rerun with: -s
+==116064== ERROR SUMMARY: 13 errors from 6 contexts (suppressed: 0 from 0)
+
+
+
+
+
+ Test 38 : 
+ 
+==116075== Memcheck, a memory error detector
+==116075== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==116075== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==116075== Command: ./s21_grep -ilof 1 -ilof E TestText1.txt TestText2.txt TestText3.txt
+==116075== 
+==116075== Conditional jump or move depends on uninitialised value(s)
+==116075==    at 0x10983E: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==116075== 
+==116075== Conditional jump or move depends on uninitialised value(s)
+==116075==    at 0x109886: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==116075== 
+==116075== Conditional jump or move depends on uninitialised value(s)
+==116075==    at 0x109B8F: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==116075== 
+==116075== Conditional jump or move depends on uninitialised value(s)
+==116075==    at 0x48FF1F6: getdelim (iogetdelim.c:62)
+==116075==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==116075== 
+grep: 1: No such file or directory
+grep: E: No such file or directory
+==116075== 
+==116075== HEAP SUMMARY:
+==116075==     in use at exit: 1,536 bytes in 4 blocks
+==116075==   total heap usage: 13 allocs, 9 frees, 18,968 bytes allocated
+==116075== 
+==116075== 120 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==116075==    at 0x48457A8: malloc (vg_replace_malloc.c:446)
+==116075==    by 0x48FF39D: getdelim (iogetdelim.c:65)
+==116075==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==116075== 
+==116075== LEAK SUMMARY:
+==116075==    definitely lost: 120 bytes in 1 blocks
+==116075==    indirectly lost: 0 bytes in 0 blocks
+==116075==      possibly lost: 0 bytes in 0 blocks
+==116075==    still reachable: 1,416 bytes in 3 blocks
+==116075==         suppressed: 0 bytes in 0 blocks
+==116075== Reachable blocks (those to which a pointer was found) are not shown.
+==116075== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==116075== 
+==116075== Use --track-origins=yes to see where uninitialised values come from
+==116075== For lists of detected and suppressed errors, rerun with: -s
+==116075== ERROR SUMMARY: 10 errors from 5 contexts (suppressed: 0 from 0)
+
+
+
+
+
+ Test 39 : 
+ 
+==116084== Memcheck, a memory error detector
+==116084== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==116084== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==116084== Command: ./s21_grep -hinof 1 -hinof E TestText1.txt TestText2.txt TestText3.txt
+==116084== 
+==116084== Conditional jump or move depends on uninitialised value(s)
+==116084==    at 0x10983E: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==116084== 
+==116084== Conditional jump or move depends on uninitialised value(s)
+==116084==    at 0x109886: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==116084== 
+==116084== Conditional jump or move depends on uninitialised value(s)
+==116084==    at 0x109B8F: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==116084== 
+==116084== Conditional jump or move depends on uninitialised value(s)
+==116084==    at 0x48FF1F6: getdelim (iogetdelim.c:62)
+==116084==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==116084== 
+==116084== Conditional jump or move depends on uninitialised value(s)
+==116084==    at 0x109B28: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==116084== 
+==116084== Conditional jump or move depends on uninitialised value(s)
+==116084==    at 0x109B37: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==116084== 
+grep: 1: No such file or directory
+grep: E: No such file or directory
+==116084== 
+==116084== HEAP SUMMARY:
+==116084==     in use at exit: 1,536 bytes in 4 blocks
+==116084==   total heap usage: 13 allocs, 9 frees, 18,968 bytes allocated
+==116084== 
+==116084== 120 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==116084==    at 0x48457A8: malloc (vg_replace_malloc.c:446)
+==116084==    by 0x48FF39D: getdelim (iogetdelim.c:65)
+==116084==    by 0x109ACE: main (in /home/user/work/C_Projects/greputilite/s21_grep)
+==116084== 
+==116084== LEAK SUMMARY:
+==116084==    definitely lost: 120 bytes in 1 blocks
+==116084==    indirectly lost: 0 bytes in 0 blocks
+==116084==      possibly lost: 0 bytes in 0 blocks
+==116084==    still reachable: 1,416 bytes in 3 blocks
+==116084==         suppressed: 0 bytes in 0 blocks
+==116084== Reachable blocks (those to which a pointer was found) are not shown.
+==116084== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==116084== 
+==116084== Use --track-origins=yes to see where uninitialised values come from
+==116084== For lists of detected and suppressed errors, rerun with: -s
+==116084== ERROR SUMMARY: 16 errors from 7 contexts (suppressed: 0 from 0)

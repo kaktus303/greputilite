@@ -1,0 +1,455 @@
+
+
+ Test 0 : 
+ 
+
+ Test 1 : 
+ 
+4c4
+< TestText3.txt: three files 
+---
+> TestText3.txt: Three filEs 
+
+ Test 2 : 
+ 
+1d0
+< TestText1.txt:123   456
+3,4d1
+< TestText1.txt:t
+< TestText1.txt:is
+7d3
+< TestText1.txt:e
+9,10d4
+< TestText1.txt:789
+< TestText2.txt:two files   456
+13,14d6
+< TestText2.txt:
+< TestText2.txt:t
+18,20d9
+< TestText2.txt:
+< TestText2.txt:
+< TestText2.txt:789
+25,28d13
+< TestText3.txt:
+< TestText3.txt:
+< TestText3.txt:
+< TestText3.txt: Three filEs 
+30,32d14
+< TestText3.txt: 
+< TestText3.txt:   175
+< TestText3.txt:
+37,40d18
+< TestText3.txt:
+< TestText3.txt:
+< TestText3.txt:
+< TestText3.txt:751
+42,43d19
+< TestText3.txt:hello world
+< TestText3.txt:this is a test
+45d20
+< TestText3.txt:another lines
+
+ Test 3 : 
+ 
+
+ Test 4 : 
+ 
+
+ Test 5 : 
+ 
+
+ Test 6 : 
+ 
+4c4
+< TestText3.txt: three files 
+---
+> TestText3.txt: Three filEs 
+
+ Test 7 : 
+ 
+1d0
+< TestText1.txt:123   456
+3,4d1
+< TestText1.txt:t
+< TestText1.txt:is
+6d2
+< TestText1.txt:e
+8,10d3
+< TestText1.txt:789
+< TestText2.txt:two files   456
+< TestText2.txt:
+13,14d5
+< TestText2.txt:t
+< TestText2.txt:
+17,18d7
+< TestText2.txt:
+< TestText2.txt:789
+23,27d11
+< TestText3.txt:
+< TestText3.txt:
+< TestText3.txt:
+< TestText3.txt: three files 
+< TestText3.txt: 
+29,33d12
+< TestText3.txt:   175
+< TestText3.txt:
+< TestText3.txt:
+< TestText3.txt:
+< TestText3.txt:
+38,41d16
+< TestText3.txt:751
+< TestText3.txt:hello world
+< TestText3.txt:this is a test
+< TestText3.txt:another lines
+
+ Test 8 : 
+ 
+
+ Test 9 : 
+ 
+
+ Test 10 : 
+ 
+4c4
+< TestText3.txt:4: three files 
+---
+> TestText3.txt:4: Three filEs 
+
+ Test 11 : 
+ 
+1,3c1,3
+< TestText1.txt:9
+< TestText2.txt:12
+< TestText3.txt:25
+---
+> TestText1.txt:4
+> TestText2.txt:6
+> TestText3.txt:11
+
+ Test 12 : 
+ 
+
+ Test 13 : 
+ 
+1d0
+< TestText1.txt:1:123   456
+3,4d1
+< TestText1.txt:2:t
+< TestText1.txt:3:is
+7d3
+< TestText1.txt:4:e
+9,10d4
+< TestText1.txt:5:789
+< TestText2.txt:1:two files   456
+13,14d6
+< TestText2.txt:2:
+< TestText2.txt:3:t
+17d8
+< TestText2.txt:4:
+19,20d9
+< TestText2.txt:5:
+< TestText2.txt:6:789
+23,24d11
+< TestText3.txt:1:
+< TestText3.txt:2:
+27,28d13
+< TestText3.txt:3:
+< TestText3.txt:4: Three filEs 
+30,32d14
+< TestText3.txt:5: 
+< TestText3.txt:6:   175
+< TestText3.txt:7:
+35,36d16
+< TestText3.txt:8:
+< TestText3.txt:9:
+39,40d18
+< TestText3.txt:10:
+< TestText3.txt:11:751
+42,43d19
+< TestText3.txt:12:hello world
+< TestText3.txt:13:this is a test
+45d20
+< TestText3.txt:14:another lines
+
+ Test 14 : 
+ 
+
+ Test 15 : 
+ 
+
+ Test 16 : 
+ 
+
+ Test 17 : 
+ 
+
+ Test 18 : 
+ 
+4c4
+<  three files 
+---
+>  Three filEs 
+
+ Test 19 : 
+ 
+1d0
+< 123   456
+3,4d1
+< t
+< is
+6d2
+< e
+8,10d3
+< 789
+< two files   456
+< 
+13,14d5
+< t
+< 
+17,18d7
+< 
+< 789
+23,27d11
+< 
+< 
+< 
+<  three files 
+<  
+29,33d12
+<    175
+< 
+< 
+< 
+< 
+38,41d16
+< 751
+< hello world
+< this is a test
+< another lines
+
+ Test 20 : 
+ 
+1,3c1,3
+< TestText1.txt:2
+< TestText2.txt:1
+< TestText3.txt:6
+---
+> 2
+> 1
+> 6
+
+ Test 21 : 
+ 
+
+ Test 22 : 
+ 
+4c4
+< 4: three files 
+---
+> 4: Three filEs 
+
+ Test 23 : 
+ 
+
+ Test 24 : 
+ 
+4c4
+< TestText3.txt: three files 
+---
+> TestText3.txt: Three filEs 
+
+ Test 25 : 
+ 
+1d0
+< TestText1.txt:123   456
+3,4d1
+< TestText1.txt:t
+< TestText1.txt:is
+6d2
+< TestText1.txt:e
+8,10d3
+< TestText1.txt:789
+< TestText2.txt:two files   456
+< TestText2.txt:
+13,14d5
+< TestText2.txt:t
+< TestText2.txt:
+17,18d7
+< TestText2.txt:
+< TestText2.txt:789
+23,27d11
+< TestText3.txt:
+< TestText3.txt:
+< TestText3.txt:
+< TestText3.txt: three files 
+< TestText3.txt: 
+29,33d12
+< TestText3.txt:   175
+< TestText3.txt:
+< TestText3.txt:
+< TestText3.txt:
+< TestText3.txt:
+38,41d16
+< TestText3.txt:751
+< TestText3.txt:hello world
+< TestText3.txt:this is a test
+< TestText3.txt:another lines
+
+ Test 26 : 
+ 
+
+ Test 27 : 
+ 
+
+ Test 28 : 
+ 
+4c4
+< TestText3.txt:4: three files 
+---
+> TestText3.txt:4: Three filEs 
+
+ Test 29 : 
+ 
+0a1,7
+> two files   456
+> t
+> 789
+>  Three filEs 
+> hello world
+> this is a test
+> another lines
+
+ Test 30 : 
+ 
+0a1,7
+> TestText2.txt:two files   456
+> TestText2.txt:t
+> TestText2.txt:789
+> TestText3.txt: Three filEs 
+> TestText3.txt:hello world
+> TestText3.txt:this is a test
+> TestText3.txt:another lines
+
+ Test 31 : 
+ 
+0a1,13
+> TestText2.txt:
+> TestText2.txt:
+> TestText2.txt:
+> TestText3.txt:
+> TestText3.txt:
+> TestText3.txt:
+> TestText3.txt: 
+> TestText3.txt:   175
+> TestText3.txt:
+> TestText3.txt:
+> TestText3.txt:
+> TestText3.txt:
+> TestText3.txt:751
+
+ Test 32 : 
+ 
+1,3c1,2
+< TestText1.txt:0
+< TestText2.txt:0
+< TestText3.txt:0
+---
+> 3
+> 4
+
+ Test 33 : 
+ 
+0a1,2
+> TestText2.txt
+> TestText3.txt
+
+ Test 34 : 
+ 
+0a1,7
+> 1:two files   456
+> 3:t
+> 6:789
+> 4: Three filEs 
+> 12:hello world
+> 13:this is a test
+> 14:another lines
+
+ Test 35 : 
+ 
+0a1,16
+> TestText2.txt:t
+> TestText2.txt:e
+> TestText2.txt:t
+> TestText2.txt:789
+> TestText3.txt:e
+> TestText3.txt:e
+> TestText3.txt:e
+> TestText3.txt:t
+> TestText3.txt:is
+> TestText3.txt:is
+> TestText3.txt:t
+> TestText3.txt:e
+> TestText3.txt:t
+> TestText3.txt:t
+> TestText3.txt:e
+> TestText3.txt:e
+
+ Test 36 : 
+ 
+0a1,18
+> TestText2.txt:t
+> TestText2.txt:e
+> TestText2.txt:t
+> TestText2.txt:789
+> TestText3.txt:T
+> TestText3.txt:e
+> TestText3.txt:e
+> TestText3.txt:E
+> TestText3.txt:e
+> TestText3.txt:t
+> TestText3.txt:is
+> TestText3.txt:is
+> TestText3.txt:t
+> TestText3.txt:e
+> TestText3.txt:t
+> TestText3.txt:t
+> TestText3.txt:e
+> TestText3.txt:e
+
+ Test 37 : 
+ 
+1,3c1,2
+< TestText1.txt:0
+< TestText2.txt:0
+< TestText3.txt:0
+---
+> 3
+> 4
+
+ Test 38 : 
+ 
+0a1,2
+> TestText2.txt
+> TestText3.txt
+
+ Test 39 : 
+ 
+0a1,18
+> 1:t
+> 1:e
+> 3:t
+> 6:789
+> 4:T
+> 4:e
+> 4:e
+> 4:E
+> 12:e
+> 13:t
+> 13:is
+> 13:is
+> 13:t
+> 13:e
+> 13:t
+> 14:t
+> 14:e
+> 14:e
