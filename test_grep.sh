@@ -61,9 +61,9 @@ done
 echo -e "\n All: \n Test program : $count_complite/"$((cur+1))
 printf ' Test memory: %d/%d\n' $(grep -c "no leaks" $log_memory) $((cur+1))
 printf ' Test ERROR SUMMARY: %d/%d\n' $(grep -c "0 errors from 0 contexts" $log_memory) $((cur+1))
-rm -r TestText1.txt
-rm -r TestText2.txt
-rm -r TestText3.txt
-rm -r $grepFile
-rm -r $s21_grepFile
+# rm -r TestText1.txt
+# rm -r TestText2.txt
+# rm -r TestText3.txt
+# rm -r $grepFile
+# rm -r $s21_grepFile
 # rm -r vgcore.*
