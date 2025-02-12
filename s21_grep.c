@@ -132,7 +132,25 @@ void print_string_slice(char *string, int n)
         printf("%c", string[i]);
     }
 }
-int string_printing(char *now_string, char *shablon, char *file_name, Flags *flags, int all_strings_counter)
+void string_print(char *now_string, char *file_name, Flags *flags, int all_strings_counter)
+{
+    if (!flags->c && !flags->l)
+        {
+            if (!flags->h)
+                printf("%s:", file_name);
+            if (flags->n)
+                printf("%d:", all_strings_counter);
+            // if (flags->o)
+            //     print_string_slice(variable, strlen(shablon));
+            else
+            {
+                printf("%s", now_string);
+                if (now_string[strlen(now_string) - 1] != '\n')
+                    printf("\n");
+            }
+        }
+}
+int string_checking (char *now_string, char *shablon, char *file_name, Flags *flags, int all_strings_counter)
 {
     char *i_shablon = malloc(sizeof(char) * strlen(shablon));
     char *i_line = malloc(sizeof(char) * strlen(now_string));
@@ -151,35 +169,22 @@ int string_printing(char *now_string, char *shablon, char *file_name, Flags *fla
         variable = strstr(i_line, i_shablon);
     }
     else
+    
         variable = strstr(now_string, shablon);
     // printf("\n*%s*\n", variable);
     // printf("\n*%s*%s*%s\n", shablon, now_string, strstr(now_string, shablon));
-    if ((variable != NULL && flags->v == 0) || (variable == NULL && flags->v == 1))
+    if (variable != NULL)
     {
-        // printf("\n*%s*%s*%s\n", shablon, now_string, strstr(now_string, shablon));
-        string_counter++;
-        if (!flags->c && !flags->l)
-        {
-            if (!flags->h)
-                printf("%s:", file_name);
-            if (flags->n)
-                printf("%d:", all_strings_counter);
-            if (flags->o)
-                print_string_slice(variable, strlen(shablon));
-            else
-            {
-                printf("%s", now_string);
-                if (now_string[strlen(now_string) - 1] != '\n')
-                    printf("\n");
-            }
-        }
+        return 1;
     }
-    return string_counter;
+    else {
+        return 0;
+    };
 }
 int main(int argc, char *argv[])
 {
     Flags *flags = malloc(sizeof(Flags));
-    int execute_flag = 1, flag = 1, string_counter = 0, all_strings_counter = 0, number_of_shablons = 0, files_counter = 0, number_of_shablon_files = 0, string_flag;
+    int execute_flag = 1, flag = 1, string_counter = 0, all_strings_counter = 0, number_of_shablons = 0, files_counter = 0, number_of_shablon_files = 0, string_flag, string_print_flag = 0;
     int number_of_files = 0, capasity_of_shablons = 1;
     size_t string_len = 1;
     char *now_string, *output, *variable, *i_shablon, *i_line;
@@ -223,9 +228,8 @@ int main(int argc, char *argv[])
                         // printf("HORAY88\n");
                         for (int j = 0; j < number_of_shablons && string_flag == 0; ++j)
                         {
-                            if (string_printing(now_string, argv[shablons[j]], argv[files[i]], flags, all_strings_counter) == 1)
+                            if (string_checking(now_string, argv[shablons[j]], argv[files[i]], flags, all_strings_counter) == 1)
                             {
-                                string_counter++;
                                 string_flag = 1;
                             }
                         }
@@ -235,13 +239,12 @@ int main(int argc, char *argv[])
                             {
                                 shablon_file = fopen(argv[shablon_files[k]], "r");
                                 if (shablon_file)
-                                    while (getline(&shablon_string, &shablon_string_len, shablon_file) != -1 && string_flag == 0)
+                                    while (getline(&shablon_string, &shablon_string_len, shablon_file) != -1 && string_flag > 0)
                                     {
                                         // printf("\n***|%s|***\n", shablon_string);
                                         // if(shablon_string[strlen(shablon_string)-2] == '\n') shablon_string[shablon_string_len-2] = '\0';
-                                        if (string_printing(now_string, shablon_string, argv[files[i]], flags, all_strings_counter) == 1)
+                                        if (string_checking(now_string, shablon_string, argv[files[i]], flags, all_strings_counter) == 1)
                                         {
-                                            string_counter++;
                                             string_flag = 1;
                                         }
                                     }
@@ -250,6 +253,11 @@ int main(int argc, char *argv[])
                                     printf("grep: %s: No such file or directory\n", argv[shablon_files[k]]);
                                 }
                             }
+                        }
+                        string_counter+=string_flag;
+                        if((string_flag == 1 && !flags->v) || (string_flag == 0 && flags->v))
+                        {
+                            string_print(now_string, argv[files[i]], flags, all_strings_counter);
                         }
                         // free(now_string);
                         // free(variable);
