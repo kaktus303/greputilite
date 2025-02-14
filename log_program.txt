@@ -8,14 +8,6 @@
 
  Test 2 : 
  
-1d0
-< TestText1.txt:123   456
-15d13
-< TestText3.txt: Three filEs 
-17d14
-< TestText3.txt:   175
-22d18
-< TestText3.txt:751
 
  Test 3 : 
  
@@ -31,21 +23,6 @@
 
  Test 7 : 
  
-1d0
-< TestText1.txt:123   456
-4d2
-< TestText1.txt:e
-6d3
-< TestText2.txt:two files   456
-15d11
-< TestText3.txt: Three filEs 
-17d12
-< TestText3.txt:   175
-22,25d16
-< TestText3.txt:751
-< TestText3.txt:hello world
-< TestText3.txt:this is a test
-< TestText3.txt:another lines
 
  Test 8 : 
  
@@ -58,28 +35,12 @@
 
  Test 11 : 
  
-1c1
-< TestText1.txt:5
----
-> TestText1.txt:4
-3c3
-< TestText3.txt:14
----
-> TestText3.txt:11
 
  Test 12 : 
  
 
  Test 13 : 
  
-1d0
-< TestText1.txt:1:123   456
-15d13
-< TestText3.txt:4: Three filEs 
-17d14
-< TestText3.txt:6:   175
-22d18
-< TestText3.txt:11:751
 
  Test 14 : 
  
@@ -98,32 +59,9 @@
 
  Test 19 : 
  
-1d0
-< 123   456
-4d2
-< e
-6d3
-< two files   456
-15d11
-<  Three filEs 
-17d12
-<    175
-22,25d16
-< 751
-< hello world
-< this is a test
-< another lines
 
  Test 20 : 
  
-1,3c1,3
-< TestText1.txt:2
-< TestText2.txt:1
-< TestText3.txt:6
----
-> 2
-> 1
-> 6
 
  Test 21 : 
  
@@ -139,21 +77,6 @@
 
  Test 25 : 
  
-1d0
-< TestText1.txt:123   456
-4d2
-< TestText1.txt:e
-6d3
-< TestText2.txt:two files   456
-15d11
-< TestText3.txt: Three filEs 
-17d12
-< TestText3.txt:   175
-22,25d16
-< TestText3.txt:751
-< TestText3.txt:hello world
-< TestText3.txt:this is a test
-< TestText3.txt:another lines
 
  Test 26 : 
  
@@ -172,27 +95,9 @@
 
  Test 31 : 
  
-1d0
-< TestText2.txt:two files   456
-3d1
-< TestText2.txt:t
-6d3
-< TestText2.txt:789
-10d6
-< TestText3.txt: Three filEs 
-18,20d13
-< TestText3.txt:hello world
-< TestText3.txt:this is a test
-< TestText3.txt:another lines
 
  Test 32 : 
  
-1,2c1,2
-< TestText2.txt:3
-< TestText3.txt:4
----
-> 3
-> 4
 
  Test 33 : 
  
@@ -202,14 +107,17 @@
 
  Test 35 : 
  
-1c1,16
-< TestText2.txt:tTestText2.txt:tTestText2.txt:789TestText3.txt:eTestText3.txt:eTestText3.txt:tTestText3.txt:t
-\ No newline at end of file
+1c1,2
+< TestText2.txt:two files   456
 ---
 > TestText2.txt:t
 > TestText2.txt:e
-> TestText2.txt:t
-> TestText2.txt:789
+4,7c5,16
+< TestText3.txt: Three filEs 
+< TestText3.txt:hello world
+< TestText3.txt:this is a test
+< TestText3.txt:another lines
+---
 > TestText3.txt:e
 > TestText3.txt:e
 > TestText3.txt:e
@@ -225,14 +133,17 @@
 
  Test 36 : 
  
-1c1,18
-< TestText2.txt:tTestText2.txt:tTestText2.txt:789TestText3.txt:tTestText3.txt:eTestText3.txt:tTestText3.txt:t
-\ No newline at end of file
+1c1,2
+< TestText2.txt:two files   456
 ---
 > TestText2.txt:t
 > TestText2.txt:e
-> TestText2.txt:t
-> TestText2.txt:789
+4,7c5,18
+< TestText3.txt: Three filEs 
+< TestText3.txt:hello world
+< TestText3.txt:this is a test
+< TestText3.txt:another lines
+---
 > TestText3.txt:T
 > TestText3.txt:e
 > TestText3.txt:e
@@ -250,26 +161,23 @@
 
  Test 37 : 
  
-1,2c1,2
-< TestText2.txt:3
-< TestText3.txt:4
----
-> 3
-> 4
 
  Test 38 : 
  
 
  Test 39 : 
  
-1c1,18
-< 1:t3:t6:7894:t12:e13:t14:t
-\ No newline at end of file
+1c1,2
+< 1:two files   456
 ---
 > 1:t
 > 1:e
-> 3:t
-> 6:789
+4,7c5,18
+< 4: Three filEs 
+< 12:hello world
+< 13:this is a test
+< 14:another lines
+---
 > 4:T
 > 4:e
 > 4:e

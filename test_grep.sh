@@ -44,7 +44,7 @@ for ARGS in "${ARGS[@]}"; do
     fi
     ((cur+=1))
     echo -e "\n\n\n\n\n Test $cur : \n " >> "$log_memory"
-    valgrind --tool=memcheck --leak-check=yes $s21_grep "$ARGS" "$temp1" "$ARGS" "$temp2" "$testingText1" "$testingText2" "$testingText3" >> "$log_memory" 2>&1
+    valgrind --tool=memcheck --leak-check=yes -s  $s21_grep "$ARGS" "$temp1" "$ARGS" "$temp2" "$testingText1" "$testingText2" "$testingText3" >> "$log_memory" 2>&1
   else
     echo "Файл $s21_grep не найден или у него нет прав на выполнение."
   fi
