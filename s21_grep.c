@@ -216,8 +216,7 @@ int main(int argc, char *argv[])
         // printf("%d", number_of_shablon_files);
         for (int i = 0; i < number_of_files; ++i)
         {
-            if (files[i] != shablons[0])
-            {
+          
                 file = fopen(argv[files[i]], "r");
                 if (file)
                 {
@@ -229,6 +228,8 @@ int main(int argc, char *argv[])
                         all_strings_counter++;
                         string_flag = 0;
                         // printf("HORAY88\n");
+                        if (number_of_shablons!=0 && files[i] != shablons[0])
+                        {
                         for (int j = 0; j < number_of_shablons; ++j)
                         {
                             if (string_checking(now_string, argv[shablons[j]], flags) == 1)
@@ -236,6 +237,7 @@ int main(int argc, char *argv[])
                                 string_flag = 1;
                             }
                         }
+                    }
                         if (flags->f)
                         {
                             for (int k = 0; k < number_of_shablon_files; ++k)
@@ -292,7 +294,7 @@ int main(int argc, char *argv[])
                         printf("grep: %s: No such file or directory\n", argv[files[i]]);
                 }
             }
-        }
+        
     }
     free(flags);
     free(shablons);

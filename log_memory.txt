@@ -6,23 +6,23 @@
 
  Test 0 : 
  
-==40026== Memcheck, a memory error detector
-==40026== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
-==40026== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
-==40026== Command: ./s21_grep -e 1 -e E TestText1.txt TestText2.txt TestText3.txt
-==40026== 
+==52610== Memcheck, a memory error detector
+==52610== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==52610== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==52610== Command: ./s21_grep -e 1 -e E TestText1.txt TestText2.txt TestText3.txt
+==52610== 
 TestText1.txt:123   456
 TestText3.txt: Three filEs 
 TestText3.txt:   175
 TestText3.txt:751
-==40026== 
-==40026== HEAP SUMMARY:
-==40026==     in use at exit: 0 bytes in 0 blocks
-==40026==   total heap usage: 112 allocs, 112 frees, 19,348 bytes allocated
-==40026== 
-==40026== All heap blocks were freed -- no leaks are possible
-==40026== 
-==40026== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==52610== 
+==52610== HEAP SUMMARY:
+==52610==     in use at exit: 0 bytes in 0 blocks
+==52610==   total heap usage: 112 allocs, 112 frees, 19,348 bytes allocated
+==52610== 
+==52610== All heap blocks were freed -- no leaks are possible
+==52610== 
+==52610== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 
 
@@ -30,11 +30,11 @@ TestText3.txt:751
 
  Test 1 : 
  
-==40038== Memcheck, a memory error detector
-==40038== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
-==40038== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
-==40038== Command: ./s21_grep -ie 1 -ie E TestText1.txt TestText2.txt TestText3.txt
-==40038== 
+==52622== Memcheck, a memory error detector
+==52622== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==52622== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==52622== Command: ./s21_grep -ie 1 -ie E TestText1.txt TestText2.txt TestText3.txt
+==52622== 
 TestText1.txt:123   456
 TestText1.txt:e
 TestText2.txt:two files   456
@@ -44,14 +44,14 @@ TestText3.txt:751
 TestText3.txt:hello world
 TestText3.txt:this is a test
 TestText3.txt:another lines
-==40038== 
-==40038== HEAP SUMMARY:
-==40038==     in use at exit: 0 bytes in 0 blocks
-==40038==   total heap usage: 112 allocs, 112 frees, 19,348 bytes allocated
-==40038== 
-==40038== All heap blocks were freed -- no leaks are possible
-==40038== 
-==40038== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==52622== 
+==52622== HEAP SUMMARY:
+==52622==     in use at exit: 0 bytes in 0 blocks
+==52622==   total heap usage: 112 allocs, 112 frees, 19,348 bytes allocated
+==52622== 
+==52622== All heap blocks were freed -- no leaks are possible
+==52622== 
+==52622== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 
 
@@ -59,11 +59,11 @@ TestText3.txt:another lines
 
  Test 2 : 
  
-==40047== Memcheck, a memory error detector
-==40047== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
-==40047== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
-==40047== Command: ./s21_grep -ve 1 -ve E TestText1.txt TestText2.txt TestText3.txt
-==40047== 
+==52631== Memcheck, a memory error detector
+==52631== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==52631== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==52631== Command: ./s21_grep -ve 1 -ve E TestText1.txt TestText2.txt TestText3.txt
+==52631== 
 TestText1.txt:t
 TestText1.txt:is
 TestText1.txt:e
@@ -85,14 +85,14 @@ TestText3.txt:
 TestText3.txt:hello world
 TestText3.txt:this is a test
 TestText3.txt:another lines
-==40047== 
-==40047== HEAP SUMMARY:
-==40047==     in use at exit: 0 bytes in 0 blocks
-==40047==   total heap usage: 112 allocs, 112 frees, 19,348 bytes allocated
-==40047== 
-==40047== All heap blocks were freed -- no leaks are possible
-==40047== 
-==40047== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==52631== 
+==52631== HEAP SUMMARY:
+==52631==     in use at exit: 0 bytes in 0 blocks
+==52631==   total heap usage: 112 allocs, 112 frees, 19,348 bytes allocated
+==52631== 
+==52631== All heap blocks were freed -- no leaks are possible
+==52631== 
+==52631== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 
 
@@ -100,22 +100,22 @@ TestText3.txt:another lines
 
  Test 3 : 
  
-==40058== Memcheck, a memory error detector
-==40058== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
-==40058== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
-==40058== Command: ./s21_grep -ce 1 -ce E TestText1.txt TestText2.txt TestText3.txt
-==40058== 
+==52642== Memcheck, a memory error detector
+==52642== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==52642== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==52642== Command: ./s21_grep -ce 1 -ce E TestText1.txt TestText2.txt TestText3.txt
+==52642== 
 TestText1.txt:1
 TestText2.txt:0
 TestText3.txt:3
-==40058== 
-==40058== HEAP SUMMARY:
-==40058==     in use at exit: 0 bytes in 0 blocks
-==40058==   total heap usage: 112 allocs, 112 frees, 19,348 bytes allocated
-==40058== 
-==40058== All heap blocks were freed -- no leaks are possible
-==40058== 
-==40058== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==52642== 
+==52642== HEAP SUMMARY:
+==52642==     in use at exit: 0 bytes in 0 blocks
+==52642==   total heap usage: 112 allocs, 112 frees, 19,348 bytes allocated
+==52642== 
+==52642== All heap blocks were freed -- no leaks are possible
+==52642== 
+==52642== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 
 
@@ -123,21 +123,21 @@ TestText3.txt:3
 
  Test 4 : 
  
-==40067== Memcheck, a memory error detector
-==40067== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
-==40067== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
-==40067== Command: ./s21_grep -le 1 -le E TestText1.txt TestText2.txt TestText3.txt
-==40067== 
+==52655== Memcheck, a memory error detector
+==52655== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==52655== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==52655== Command: ./s21_grep -le 1 -le E TestText1.txt TestText2.txt TestText3.txt
+==52655== 
 TestText1.txt
 TestText3.txt
-==40067== 
-==40067== HEAP SUMMARY:
-==40067==     in use at exit: 0 bytes in 0 blocks
-==40067==   total heap usage: 112 allocs, 112 frees, 19,348 bytes allocated
-==40067== 
-==40067== All heap blocks were freed -- no leaks are possible
-==40067== 
-==40067== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==52655== 
+==52655== HEAP SUMMARY:
+==52655==     in use at exit: 0 bytes in 0 blocks
+==52655==   total heap usage: 112 allocs, 112 frees, 19,348 bytes allocated
+==52655== 
+==52655== All heap blocks were freed -- no leaks are possible
+==52655== 
+==52655== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 
 
@@ -145,23 +145,23 @@ TestText3.txt
 
  Test 5 : 
  
-==40078== Memcheck, a memory error detector
-==40078== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
-==40078== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
-==40078== Command: ./s21_grep -ne 1 -ne E TestText1.txt TestText2.txt TestText3.txt
-==40078== 
+==52664== Memcheck, a memory error detector
+==52664== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==52664== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==52664== Command: ./s21_grep -ne 1 -ne E TestText1.txt TestText2.txt TestText3.txt
+==52664== 
 TestText1.txt:1:123   456
 TestText3.txt:4: Three filEs 
 TestText3.txt:6:   175
 TestText3.txt:11:751
-==40078== 
-==40078== HEAP SUMMARY:
-==40078==     in use at exit: 0 bytes in 0 blocks
-==40078==   total heap usage: 112 allocs, 112 frees, 19,348 bytes allocated
-==40078== 
-==40078== All heap blocks were freed -- no leaks are possible
-==40078== 
-==40078== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==52664== 
+==52664== HEAP SUMMARY:
+==52664==     in use at exit: 0 bytes in 0 blocks
+==52664==   total heap usage: 112 allocs, 112 frees, 19,348 bytes allocated
+==52664== 
+==52664== All heap blocks were freed -- no leaks are possible
+==52664== 
+==52664== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 
 
@@ -169,11 +169,11 @@ TestText3.txt:11:751
 
  Test 6 : 
  
-==40087== Memcheck, a memory error detector
-==40087== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
-==40087== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
-==40087== Command: ./s21_grep -ie 1 -ie E TestText1.txt TestText2.txt TestText3.txt
-==40087== 
+==52677== Memcheck, a memory error detector
+==52677== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==52677== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==52677== Command: ./s21_grep -ie 1 -ie E TestText1.txt TestText2.txt TestText3.txt
+==52677== 
 TestText1.txt:123   456
 TestText1.txt:e
 TestText2.txt:two files   456
@@ -183,14 +183,14 @@ TestText3.txt:751
 TestText3.txt:hello world
 TestText3.txt:this is a test
 TestText3.txt:another lines
-==40087== 
-==40087== HEAP SUMMARY:
-==40087==     in use at exit: 0 bytes in 0 blocks
-==40087==   total heap usage: 112 allocs, 112 frees, 19,348 bytes allocated
-==40087== 
-==40087== All heap blocks were freed -- no leaks are possible
-==40087== 
-==40087== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==52677== 
+==52677== HEAP SUMMARY:
+==52677==     in use at exit: 0 bytes in 0 blocks
+==52677==   total heap usage: 112 allocs, 112 frees, 19,348 bytes allocated
+==52677== 
+==52677== All heap blocks were freed -- no leaks are possible
+==52677== 
+==52677== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 
 
@@ -198,11 +198,11 @@ TestText3.txt:another lines
 
  Test 7 : 
  
-==40098== Memcheck, a memory error detector
-==40098== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
-==40098== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
-==40098== Command: ./s21_grep -ive 1 -ive E TestText1.txt TestText2.txt TestText3.txt
-==40098== 
+==52686== Memcheck, a memory error detector
+==52686== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==52686== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==52686== Command: ./s21_grep -ive 1 -ive E TestText1.txt TestText2.txt TestText3.txt
+==52686== 
 TestText1.txt:t
 TestText1.txt:is
 TestText1.txt:789
@@ -219,14 +219,14 @@ TestText3.txt:
 TestText3.txt:
 TestText3.txt:
 TestText3.txt:
-==40098== 
-==40098== HEAP SUMMARY:
-==40098==     in use at exit: 0 bytes in 0 blocks
-==40098==   total heap usage: 112 allocs, 112 frees, 19,348 bytes allocated
-==40098== 
-==40098== All heap blocks were freed -- no leaks are possible
-==40098== 
-==40098== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==52686== 
+==52686== HEAP SUMMARY:
+==52686==     in use at exit: 0 bytes in 0 blocks
+==52686==   total heap usage: 112 allocs, 112 frees, 19,348 bytes allocated
+==52686== 
+==52686== All heap blocks were freed -- no leaks are possible
+==52686== 
+==52686== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 
 
@@ -234,22 +234,22 @@ TestText3.txt:
 
  Test 8 : 
  
-==40107== Memcheck, a memory error detector
-==40107== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
-==40107== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
-==40107== Command: ./s21_grep -ice 1 -ice E TestText1.txt TestText2.txt TestText3.txt
-==40107== 
+==52697== Memcheck, a memory error detector
+==52697== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==52697== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==52697== Command: ./s21_grep -ice 1 -ice E TestText1.txt TestText2.txt TestText3.txt
+==52697== 
 TestText1.txt:2
 TestText2.txt:1
 TestText3.txt:6
-==40107== 
-==40107== HEAP SUMMARY:
-==40107==     in use at exit: 0 bytes in 0 blocks
-==40107==   total heap usage: 112 allocs, 112 frees, 19,348 bytes allocated
-==40107== 
-==40107== All heap blocks were freed -- no leaks are possible
-==40107== 
-==40107== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==52697== 
+==52697== HEAP SUMMARY:
+==52697==     in use at exit: 0 bytes in 0 blocks
+==52697==   total heap usage: 112 allocs, 112 frees, 19,348 bytes allocated
+==52697== 
+==52697== All heap blocks were freed -- no leaks are possible
+==52697== 
+==52697== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 
 
@@ -257,22 +257,22 @@ TestText3.txt:6
 
  Test 9 : 
  
-==40118== Memcheck, a memory error detector
-==40118== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
-==40118== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
-==40118== Command: ./s21_grep -ile 1 -ile E TestText1.txt TestText2.txt TestText3.txt
-==40118== 
+==52706== Memcheck, a memory error detector
+==52706== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==52706== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==52706== Command: ./s21_grep -ile 1 -ile E TestText1.txt TestText2.txt TestText3.txt
+==52706== 
 TestText1.txt
 TestText2.txt
 TestText3.txt
-==40118== 
-==40118== HEAP SUMMARY:
-==40118==     in use at exit: 0 bytes in 0 blocks
-==40118==   total heap usage: 112 allocs, 112 frees, 19,348 bytes allocated
-==40118== 
-==40118== All heap blocks were freed -- no leaks are possible
-==40118== 
-==40118== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==52706== 
+==52706== HEAP SUMMARY:
+==52706==     in use at exit: 0 bytes in 0 blocks
+==52706==   total heap usage: 112 allocs, 112 frees, 19,348 bytes allocated
+==52706== 
+==52706== All heap blocks were freed -- no leaks are possible
+==52706== 
+==52706== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 
 
@@ -280,11 +280,11 @@ TestText3.txt
 
  Test 10 : 
  
-==40129== Memcheck, a memory error detector
-==40129== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
-==40129== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
-==40129== Command: ./s21_grep -ine 1 -ine E TestText1.txt TestText2.txt TestText3.txt
-==40129== 
+==52717== Memcheck, a memory error detector
+==52717== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==52717== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==52717== Command: ./s21_grep -ine 1 -ine E TestText1.txt TestText2.txt TestText3.txt
+==52717== 
 TestText1.txt:1:123   456
 TestText1.txt:4:e
 TestText2.txt:1:two files   456
@@ -294,14 +294,14 @@ TestText3.txt:11:751
 TestText3.txt:12:hello world
 TestText3.txt:13:this is a test
 TestText3.txt:14:another lines
-==40129== 
-==40129== HEAP SUMMARY:
-==40129==     in use at exit: 0 bytes in 0 blocks
-==40129==   total heap usage: 112 allocs, 112 frees, 19,348 bytes allocated
-==40129== 
-==40129== All heap blocks were freed -- no leaks are possible
-==40129== 
-==40129== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==52717== 
+==52717== HEAP SUMMARY:
+==52717==     in use at exit: 0 bytes in 0 blocks
+==52717==   total heap usage: 112 allocs, 112 frees, 19,348 bytes allocated
+==52717== 
+==52717== All heap blocks were freed -- no leaks are possible
+==52717== 
+==52717== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 
 
@@ -309,22 +309,22 @@ TestText3.txt:14:another lines
 
  Test 11 : 
  
-==40140== Memcheck, a memory error detector
-==40140== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
-==40140== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
-==40140== Command: ./s21_grep -vce 1 -vce E TestText1.txt TestText2.txt TestText3.txt
-==40140== 
+==52727== Memcheck, a memory error detector
+==52727== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==52727== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==52727== Command: ./s21_grep -vce 1 -vce E TestText1.txt TestText2.txt TestText3.txt
+==52727== 
 TestText1.txt:4
 TestText2.txt:6
 TestText3.txt:11
-==40140== 
-==40140== HEAP SUMMARY:
-==40140==     in use at exit: 0 bytes in 0 blocks
-==40140==   total heap usage: 112 allocs, 112 frees, 19,348 bytes allocated
-==40140== 
-==40140== All heap blocks were freed -- no leaks are possible
-==40140== 
-==40140== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==52727== 
+==52727== HEAP SUMMARY:
+==52727==     in use at exit: 0 bytes in 0 blocks
+==52727==   total heap usage: 112 allocs, 112 frees, 19,348 bytes allocated
+==52727== 
+==52727== All heap blocks were freed -- no leaks are possible
+==52727== 
+==52727== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 
 
@@ -332,22 +332,22 @@ TestText3.txt:11
 
  Test 12 : 
  
-==40151== Memcheck, a memory error detector
-==40151== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
-==40151== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
-==40151== Command: ./s21_grep -vle 1 -vle E TestText1.txt TestText2.txt TestText3.txt
-==40151== 
+==52740== Memcheck, a memory error detector
+==52740== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==52740== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==52740== Command: ./s21_grep -vle 1 -vle E TestText1.txt TestText2.txt TestText3.txt
+==52740== 
 TestText1.txt
 TestText2.txt
 TestText3.txt
-==40151== 
-==40151== HEAP SUMMARY:
-==40151==     in use at exit: 0 bytes in 0 blocks
-==40151==   total heap usage: 112 allocs, 112 frees, 19,348 bytes allocated
-==40151== 
-==40151== All heap blocks were freed -- no leaks are possible
-==40151== 
-==40151== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==52740== 
+==52740== HEAP SUMMARY:
+==52740==     in use at exit: 0 bytes in 0 blocks
+==52740==   total heap usage: 112 allocs, 112 frees, 19,348 bytes allocated
+==52740== 
+==52740== All heap blocks were freed -- no leaks are possible
+==52740== 
+==52740== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 
 
@@ -355,11 +355,11 @@ TestText3.txt
 
  Test 13 : 
  
-==40160== Memcheck, a memory error detector
-==40160== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
-==40160== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
-==40160== Command: ./s21_grep -vne 1 -vne E TestText1.txt TestText2.txt TestText3.txt
-==40160== 
+==52749== Memcheck, a memory error detector
+==52749== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==52749== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==52749== Command: ./s21_grep -vne 1 -vne E TestText1.txt TestText2.txt TestText3.txt
+==52749== 
 TestText1.txt:2:t
 TestText1.txt:3:is
 TestText1.txt:4:e
@@ -381,14 +381,14 @@ TestText3.txt:10:
 TestText3.txt:12:hello world
 TestText3.txt:13:this is a test
 TestText3.txt:14:another lines
-==40160== 
-==40160== HEAP SUMMARY:
-==40160==     in use at exit: 0 bytes in 0 blocks
-==40160==   total heap usage: 112 allocs, 112 frees, 19,348 bytes allocated
-==40160== 
-==40160== All heap blocks were freed -- no leaks are possible
-==40160== 
-==40160== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==52749== 
+==52749== HEAP SUMMARY:
+==52749==     in use at exit: 0 bytes in 0 blocks
+==52749==   total heap usage: 112 allocs, 112 frees, 19,348 bytes allocated
+==52749== 
+==52749== All heap blocks were freed -- no leaks are possible
+==52749== 
+==52749== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 
 
@@ -396,21 +396,21 @@ TestText3.txt:14:another lines
 
  Test 14 : 
  
-==40171== Memcheck, a memory error detector
-==40171== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
-==40171== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
-==40171== Command: ./s21_grep -cle 1 -cle E TestText1.txt TestText2.txt TestText3.txt
-==40171== 
+==52760== Memcheck, a memory error detector
+==52760== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==52760== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==52760== Command: ./s21_grep -cle 1 -cle E TestText1.txt TestText2.txt TestText3.txt
+==52760== 
 TestText1.txt
 TestText3.txt
-==40171== 
-==40171== HEAP SUMMARY:
-==40171==     in use at exit: 0 bytes in 0 blocks
-==40171==   total heap usage: 112 allocs, 112 frees, 19,348 bytes allocated
-==40171== 
-==40171== All heap blocks were freed -- no leaks are possible
-==40171== 
-==40171== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==52760== 
+==52760== HEAP SUMMARY:
+==52760==     in use at exit: 0 bytes in 0 blocks
+==52760==   total heap usage: 112 allocs, 112 frees, 19,348 bytes allocated
+==52760== 
+==52760== All heap blocks were freed -- no leaks are possible
+==52760== 
+==52760== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 
 
@@ -418,22 +418,22 @@ TestText3.txt
 
  Test 15 : 
  
-==40180== Memcheck, a memory error detector
-==40180== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
-==40180== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
-==40180== Command: ./s21_grep -cne 1 -cne E TestText1.txt TestText2.txt TestText3.txt
-==40180== 
+==52769== Memcheck, a memory error detector
+==52769== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==52769== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==52769== Command: ./s21_grep -cne 1 -cne E TestText1.txt TestText2.txt TestText3.txt
+==52769== 
 TestText1.txt:1
 TestText2.txt:0
 TestText3.txt:3
-==40180== 
-==40180== HEAP SUMMARY:
-==40180==     in use at exit: 0 bytes in 0 blocks
-==40180==   total heap usage: 112 allocs, 112 frees, 19,348 bytes allocated
-==40180== 
-==40180== All heap blocks were freed -- no leaks are possible
-==40180== 
-==40180== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==52769== 
+==52769== HEAP SUMMARY:
+==52769==     in use at exit: 0 bytes in 0 blocks
+==52769==   total heap usage: 112 allocs, 112 frees, 19,348 bytes allocated
+==52769== 
+==52769== All heap blocks were freed -- no leaks are possible
+==52769== 
+==52769== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 
 
@@ -441,21 +441,21 @@ TestText3.txt:3
 
  Test 16 : 
  
-==40191== Memcheck, a memory error detector
-==40191== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
-==40191== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
-==40191== Command: ./s21_grep -lne 1 -lne E TestText1.txt TestText2.txt TestText3.txt
-==40191== 
+==52780== Memcheck, a memory error detector
+==52780== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==52780== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==52780== Command: ./s21_grep -lne 1 -lne E TestText1.txt TestText2.txt TestText3.txt
+==52780== 
 TestText1.txt
 TestText3.txt
-==40191== 
-==40191== HEAP SUMMARY:
-==40191==     in use at exit: 0 bytes in 0 blocks
-==40191==   total heap usage: 112 allocs, 112 frees, 19,348 bytes allocated
-==40191== 
-==40191== All heap blocks were freed -- no leaks are possible
-==40191== 
-==40191== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==52780== 
+==52780== HEAP SUMMARY:
+==52780==     in use at exit: 0 bytes in 0 blocks
+==52780==   total heap usage: 112 allocs, 112 frees, 19,348 bytes allocated
+==52780== 
+==52780== All heap blocks were freed -- no leaks are possible
+==52780== 
+==52780== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 
 
@@ -463,23 +463,23 @@ TestText3.txt
 
  Test 17 : 
  
-==40200== Memcheck, a memory error detector
-==40200== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
-==40200== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
-==40200== Command: ./s21_grep -he 1 -he E TestText1.txt TestText2.txt TestText3.txt
-==40200== 
+==52789== Memcheck, a memory error detector
+==52789== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==52789== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==52789== Command: ./s21_grep -he 1 -he E TestText1.txt TestText2.txt TestText3.txt
+==52789== 
 123   456
  Three filEs 
    175
 751
-==40200== 
-==40200== HEAP SUMMARY:
-==40200==     in use at exit: 0 bytes in 0 blocks
-==40200==   total heap usage: 112 allocs, 112 frees, 19,348 bytes allocated
-==40200== 
-==40200== All heap blocks were freed -- no leaks are possible
-==40200== 
-==40200== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==52789== 
+==52789== HEAP SUMMARY:
+==52789==     in use at exit: 0 bytes in 0 blocks
+==52789==   total heap usage: 112 allocs, 112 frees, 19,348 bytes allocated
+==52789== 
+==52789== All heap blocks were freed -- no leaks are possible
+==52789== 
+==52789== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 
 
@@ -487,11 +487,11 @@ TestText3.txt
 
  Test 18 : 
  
-==40211== Memcheck, a memory error detector
-==40211== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
-==40211== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
-==40211== Command: ./s21_grep -hie 1 -hie E TestText1.txt TestText2.txt TestText3.txt
-==40211== 
+==52800== Memcheck, a memory error detector
+==52800== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==52800== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==52800== Command: ./s21_grep -hie 1 -hie E TestText1.txt TestText2.txt TestText3.txt
+==52800== 
 123   456
 e
 two files   456
@@ -501,14 +501,14 @@ two files   456
 hello world
 this is a test
 another lines
-==40211== 
-==40211== HEAP SUMMARY:
-==40211==     in use at exit: 0 bytes in 0 blocks
-==40211==   total heap usage: 112 allocs, 112 frees, 19,348 bytes allocated
-==40211== 
-==40211== All heap blocks were freed -- no leaks are possible
-==40211== 
-==40211== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==52800== 
+==52800== HEAP SUMMARY:
+==52800==     in use at exit: 0 bytes in 0 blocks
+==52800==   total heap usage: 112 allocs, 112 frees, 19,348 bytes allocated
+==52800== 
+==52800== All heap blocks were freed -- no leaks are possible
+==52800== 
+==52800== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 
 
@@ -516,11 +516,11 @@ another lines
 
  Test 19 : 
  
-==40220== Memcheck, a memory error detector
-==40220== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
-==40220== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
-==40220== Command: ./s21_grep -hive 1 -hive E TestText1.txt TestText2.txt TestText3.txt
-==40220== 
+==52810== Memcheck, a memory error detector
+==52810== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==52810== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==52810== Command: ./s21_grep -hive 1 -hive E TestText1.txt TestText2.txt TestText3.txt
+==52810== 
 t
 is
 789
@@ -537,14 +537,14 @@ t
 
 
 
-==40220== 
-==40220== HEAP SUMMARY:
-==40220==     in use at exit: 0 bytes in 0 blocks
-==40220==   total heap usage: 112 allocs, 112 frees, 19,348 bytes allocated
-==40220== 
-==40220== All heap blocks were freed -- no leaks are possible
-==40220== 
-==40220== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==52810== 
+==52810== HEAP SUMMARY:
+==52810==     in use at exit: 0 bytes in 0 blocks
+==52810==   total heap usage: 112 allocs, 112 frees, 19,348 bytes allocated
+==52810== 
+==52810== All heap blocks were freed -- no leaks are possible
+==52810== 
+==52810== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 
 
@@ -552,22 +552,22 @@ t
 
  Test 20 : 
  
-==40231== Memcheck, a memory error detector
-==40231== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
-==40231== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
-==40231== Command: ./s21_grep -hice 1 -hice E TestText1.txt TestText2.txt TestText3.txt
-==40231== 
+==52820== Memcheck, a memory error detector
+==52820== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==52820== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==52820== Command: ./s21_grep -hice 1 -hice E TestText1.txt TestText2.txt TestText3.txt
+==52820== 
 2
 1
 6
-==40231== 
-==40231== HEAP SUMMARY:
-==40231==     in use at exit: 0 bytes in 0 blocks
-==40231==   total heap usage: 112 allocs, 112 frees, 19,348 bytes allocated
-==40231== 
-==40231== All heap blocks were freed -- no leaks are possible
-==40231== 
-==40231== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==52820== 
+==52820== HEAP SUMMARY:
+==52820==     in use at exit: 0 bytes in 0 blocks
+==52820==   total heap usage: 112 allocs, 112 frees, 19,348 bytes allocated
+==52820== 
+==52820== All heap blocks were freed -- no leaks are possible
+==52820== 
+==52820== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 
 
@@ -575,22 +575,22 @@ t
 
  Test 21 : 
  
-==40240== Memcheck, a memory error detector
-==40240== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
-==40240== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
-==40240== Command: ./s21_grep -hile 1 -hile E TestText1.txt TestText2.txt TestText3.txt
-==40240== 
+==52831== Memcheck, a memory error detector
+==52831== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==52831== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==52831== Command: ./s21_grep -hile 1 -hile E TestText1.txt TestText2.txt TestText3.txt
+==52831== 
 TestText1.txt
 TestText2.txt
 TestText3.txt
-==40240== 
-==40240== HEAP SUMMARY:
-==40240==     in use at exit: 0 bytes in 0 blocks
-==40240==   total heap usage: 112 allocs, 112 frees, 19,348 bytes allocated
-==40240== 
-==40240== All heap blocks were freed -- no leaks are possible
-==40240== 
-==40240== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==52831== 
+==52831== HEAP SUMMARY:
+==52831==     in use at exit: 0 bytes in 0 blocks
+==52831==   total heap usage: 112 allocs, 112 frees, 19,348 bytes allocated
+==52831== 
+==52831== All heap blocks were freed -- no leaks are possible
+==52831== 
+==52831== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 
 
@@ -598,11 +598,11 @@ TestText3.txt
 
  Test 22 : 
  
-==40251== Memcheck, a memory error detector
-==40251== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
-==40251== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
-==40251== Command: ./s21_grep -hine 1 -hine E TestText1.txt TestText2.txt TestText3.txt
-==40251== 
+==52840== Memcheck, a memory error detector
+==52840== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==52840== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==52840== Command: ./s21_grep -hine 1 -hine E TestText1.txt TestText2.txt TestText3.txt
+==52840== 
 1:123   456
 4:e
 1:two files   456
@@ -612,14 +612,14 @@ TestText3.txt
 12:hello world
 13:this is a test
 14:another lines
-==40251== 
-==40251== HEAP SUMMARY:
-==40251==     in use at exit: 0 bytes in 0 blocks
-==40251==   total heap usage: 112 allocs, 112 frees, 19,348 bytes allocated
-==40251== 
-==40251== All heap blocks were freed -- no leaks are possible
-==40251== 
-==40251== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==52840== 
+==52840== HEAP SUMMARY:
+==52840==     in use at exit: 0 bytes in 0 blocks
+==52840==   total heap usage: 112 allocs, 112 frees, 19,348 bytes allocated
+==52840== 
+==52840== All heap blocks were freed -- no leaks are possible
+==52840== 
+==52840== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 
 
@@ -627,23 +627,23 @@ TestText3.txt
 
  Test 23 : 
  
-==40260== Memcheck, a memory error detector
-==40260== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
-==40260== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
-==40260== Command: ./s21_grep -se 1 -se E TestText1.txt TestText2.txt TestText3.txt
-==40260== 
+==52851== Memcheck, a memory error detector
+==52851== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==52851== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==52851== Command: ./s21_grep -se 1 -se E TestText1.txt TestText2.txt TestText3.txt
+==52851== 
 TestText1.txt:123   456
 TestText3.txt: Three filEs 
 TestText3.txt:   175
 TestText3.txt:751
-==40260== 
-==40260== HEAP SUMMARY:
-==40260==     in use at exit: 0 bytes in 0 blocks
-==40260==   total heap usage: 112 allocs, 112 frees, 19,348 bytes allocated
-==40260== 
-==40260== All heap blocks were freed -- no leaks are possible
-==40260== 
-==40260== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==52851== 
+==52851== HEAP SUMMARY:
+==52851==     in use at exit: 0 bytes in 0 blocks
+==52851==   total heap usage: 112 allocs, 112 frees, 19,348 bytes allocated
+==52851== 
+==52851== All heap blocks were freed -- no leaks are possible
+==52851== 
+==52851== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 
 
@@ -651,11 +651,11 @@ TestText3.txt:751
 
  Test 24 : 
  
-==40271== Memcheck, a memory error detector
-==40271== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
-==40271== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
-==40271== Command: ./s21_grep -sie 1 -sie E TestText1.txt TestText2.txt TestText3.txt
-==40271== 
+==52860== Memcheck, a memory error detector
+==52860== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==52860== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==52860== Command: ./s21_grep -sie 1 -sie E TestText1.txt TestText2.txt TestText3.txt
+==52860== 
 TestText1.txt:123   456
 TestText1.txt:e
 TestText2.txt:two files   456
@@ -665,14 +665,14 @@ TestText3.txt:751
 TestText3.txt:hello world
 TestText3.txt:this is a test
 TestText3.txt:another lines
-==40271== 
-==40271== HEAP SUMMARY:
-==40271==     in use at exit: 0 bytes in 0 blocks
-==40271==   total heap usage: 112 allocs, 112 frees, 19,348 bytes allocated
-==40271== 
-==40271== All heap blocks were freed -- no leaks are possible
-==40271== 
-==40271== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==52860== 
+==52860== HEAP SUMMARY:
+==52860==     in use at exit: 0 bytes in 0 blocks
+==52860==   total heap usage: 112 allocs, 112 frees, 19,348 bytes allocated
+==52860== 
+==52860== All heap blocks were freed -- no leaks are possible
+==52860== 
+==52860== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 
 
@@ -680,11 +680,11 @@ TestText3.txt:another lines
 
  Test 25 : 
  
-==40284== Memcheck, a memory error detector
-==40284== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
-==40284== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
-==40284== Command: ./s21_grep -sive 1 -sive E TestText1.txt TestText2.txt TestText3.txt
-==40284== 
+==52873== Memcheck, a memory error detector
+==52873== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==52873== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==52873== Command: ./s21_grep -sive 1 -sive E TestText1.txt TestText2.txt TestText3.txt
+==52873== 
 TestText1.txt:t
 TestText1.txt:is
 TestText1.txt:789
@@ -701,14 +701,14 @@ TestText3.txt:
 TestText3.txt:
 TestText3.txt:
 TestText3.txt:
-==40284== 
-==40284== HEAP SUMMARY:
-==40284==     in use at exit: 0 bytes in 0 blocks
-==40284==   total heap usage: 112 allocs, 112 frees, 19,348 bytes allocated
-==40284== 
-==40284== All heap blocks were freed -- no leaks are possible
-==40284== 
-==40284== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==52873== 
+==52873== HEAP SUMMARY:
+==52873==     in use at exit: 0 bytes in 0 blocks
+==52873==   total heap usage: 112 allocs, 112 frees, 19,348 bytes allocated
+==52873== 
+==52873== All heap blocks were freed -- no leaks are possible
+==52873== 
+==52873== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 
 
@@ -716,22 +716,22 @@ TestText3.txt:
 
  Test 26 : 
  
-==40295== Memcheck, a memory error detector
-==40295== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
-==40295== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
-==40295== Command: ./s21_grep -sice 1 -sice E TestText1.txt TestText2.txt TestText3.txt
-==40295== 
+==52882== Memcheck, a memory error detector
+==52882== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==52882== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==52882== Command: ./s21_grep -sice 1 -sice E TestText1.txt TestText2.txt TestText3.txt
+==52882== 
 TestText1.txt:2
 TestText2.txt:1
 TestText3.txt:6
-==40295== 
-==40295== HEAP SUMMARY:
-==40295==     in use at exit: 0 bytes in 0 blocks
-==40295==   total heap usage: 112 allocs, 112 frees, 19,348 bytes allocated
-==40295== 
-==40295== All heap blocks were freed -- no leaks are possible
-==40295== 
-==40295== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==52882== 
+==52882== HEAP SUMMARY:
+==52882==     in use at exit: 0 bytes in 0 blocks
+==52882==   total heap usage: 112 allocs, 112 frees, 19,348 bytes allocated
+==52882== 
+==52882== All heap blocks were freed -- no leaks are possible
+==52882== 
+==52882== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 
 
@@ -739,22 +739,22 @@ TestText3.txt:6
 
  Test 27 : 
  
-==40306== Memcheck, a memory error detector
-==40306== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
-==40306== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
-==40306== Command: ./s21_grep -sile 1 -sile E TestText1.txt TestText2.txt TestText3.txt
-==40306== 
+==52893== Memcheck, a memory error detector
+==52893== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==52893== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==52893== Command: ./s21_grep -sile 1 -sile E TestText1.txt TestText2.txt TestText3.txt
+==52893== 
 TestText1.txt
 TestText2.txt
 TestText3.txt
-==40306== 
-==40306== HEAP SUMMARY:
-==40306==     in use at exit: 0 bytes in 0 blocks
-==40306==   total heap usage: 112 allocs, 112 frees, 19,348 bytes allocated
-==40306== 
-==40306== All heap blocks were freed -- no leaks are possible
-==40306== 
-==40306== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==52893== 
+==52893== HEAP SUMMARY:
+==52893==     in use at exit: 0 bytes in 0 blocks
+==52893==   total heap usage: 112 allocs, 112 frees, 19,348 bytes allocated
+==52893== 
+==52893== All heap blocks were freed -- no leaks are possible
+==52893== 
+==52893== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 
 
@@ -762,11 +762,11 @@ TestText3.txt
 
  Test 28 : 
  
-==40317== Memcheck, a memory error detector
-==40317== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
-==40317== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
-==40317== Command: ./s21_grep -sine 1 -sine E TestText1.txt TestText2.txt TestText3.txt
-==40317== 
+==52902== Memcheck, a memory error detector
+==52902== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==52902== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==52902== Command: ./s21_grep -sine 1 -sine E TestText1.txt TestText2.txt TestText3.txt
+==52902== 
 TestText1.txt:1:123   456
 TestText1.txt:4:e
 TestText2.txt:1:two files   456
@@ -776,14 +776,14 @@ TestText3.txt:11:751
 TestText3.txt:12:hello world
 TestText3.txt:13:this is a test
 TestText3.txt:14:another lines
-==40317== 
-==40317== HEAP SUMMARY:
-==40317==     in use at exit: 0 bytes in 0 blocks
-==40317==   total heap usage: 112 allocs, 112 frees, 19,348 bytes allocated
-==40317== 
-==40317== All heap blocks were freed -- no leaks are possible
-==40317== 
-==40317== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==52902== 
+==52902== HEAP SUMMARY:
+==52902==     in use at exit: 0 bytes in 0 blocks
+==52902==   total heap usage: 112 allocs, 112 frees, 19,348 bytes allocated
+==52902== 
+==52902== All heap blocks were freed -- no leaks are possible
+==52902== 
+==52902== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 
 
@@ -791,14 +791,11 @@ TestText3.txt:14:another lines
 
  Test 29 : 
  
-==40328== Memcheck, a memory error detector
-==40328== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
-==40328== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
-==40328== Command: ./s21_grep -hf 1 -hf E TestText1.txt TestText2.txt TestText3.txt
-==40328== 
-==40328== Conditional jump or move depends on uninitialised value(s)
-==40328==    at 0x109BD1: main (in /home/user/work/C_Projects/greputilite/s21_grep)
-==40328== 
+==52913== Memcheck, a memory error detector
+==52913== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==52913== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==52913== Command: ./s21_grep -hf 1 -hf E TestText1.txt TestText2.txt TestText3.txt
+==52913== 
 grep: 1: No such file or directory
 grep: E: No such file or directory
 grep: 1: No such file or directory
@@ -849,21 +846,14 @@ grep: 1: No such file or directory
 grep: E: No such file or directory
 grep: 1: No such file or directory
 grep: E: No such file or directory
-==40328== 
-==40328== HEAP SUMMARY:
-==40328==     in use at exit: 0 bytes in 0 blocks
-==40328==   total heap usage: 62 allocs, 62 frees, 41,656 bytes allocated
-==40328== 
-==40328== All heap blocks were freed -- no leaks are possible
-==40328== 
-==40328== Use --track-origins=yes to see where uninitialised values come from
-==40328== ERROR SUMMARY: 3 errors from 1 contexts (suppressed: 0 from 0)
-==40328== 
-==40328== 3 errors in context 1 of 1:
-==40328== Conditional jump or move depends on uninitialised value(s)
-==40328==    at 0x109BD1: main (in /home/user/work/C_Projects/greputilite/s21_grep)
-==40328== 
-==40328== ERROR SUMMARY: 3 errors from 1 contexts (suppressed: 0 from 0)
+==52913== 
+==52913== HEAP SUMMARY:
+==52913==     in use at exit: 0 bytes in 0 blocks
+==52913==   total heap usage: 62 allocs, 62 frees, 41,656 bytes allocated
+==52913== 
+==52913== All heap blocks were freed -- no leaks are possible
+==52913== 
+==52913== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 
 
@@ -871,14 +861,11 @@ grep: E: No such file or directory
 
  Test 30 : 
  
-==40337== Memcheck, a memory error detector
-==40337== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
-==40337== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
-==40337== Command: ./s21_grep -if 1 -if E TestText1.txt TestText2.txt TestText3.txt
-==40337== 
-==40337== Conditional jump or move depends on uninitialised value(s)
-==40337==    at 0x109BD1: main (in /home/user/work/C_Projects/greputilite/s21_grep)
-==40337== 
+==52922== Memcheck, a memory error detector
+==52922== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==52922== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==52922== Command: ./s21_grep -if 1 -if E TestText1.txt TestText2.txt TestText3.txt
+==52922== 
 grep: 1: No such file or directory
 grep: E: No such file or directory
 grep: 1: No such file or directory
@@ -929,21 +916,14 @@ grep: 1: No such file or directory
 grep: E: No such file or directory
 grep: 1: No such file or directory
 grep: E: No such file or directory
-==40337== 
-==40337== HEAP SUMMARY:
-==40337==     in use at exit: 0 bytes in 0 blocks
-==40337==   total heap usage: 62 allocs, 62 frees, 41,656 bytes allocated
-==40337== 
-==40337== All heap blocks were freed -- no leaks are possible
-==40337== 
-==40337== Use --track-origins=yes to see where uninitialised values come from
-==40337== ERROR SUMMARY: 3 errors from 1 contexts (suppressed: 0 from 0)
-==40337== 
-==40337== 3 errors in context 1 of 1:
-==40337== Conditional jump or move depends on uninitialised value(s)
-==40337==    at 0x109BD1: main (in /home/user/work/C_Projects/greputilite/s21_grep)
-==40337== 
-==40337== ERROR SUMMARY: 3 errors from 1 contexts (suppressed: 0 from 0)
+==52922== 
+==52922== HEAP SUMMARY:
+==52922==     in use at exit: 0 bytes in 0 blocks
+==52922==   total heap usage: 62 allocs, 62 frees, 41,656 bytes allocated
+==52922== 
+==52922== All heap blocks were freed -- no leaks are possible
+==52922== 
+==52922== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 
 
@@ -951,14 +931,11 @@ grep: E: No such file or directory
 
  Test 31 : 
  
-==40348== Memcheck, a memory error detector
-==40348== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
-==40348== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
-==40348== Command: ./s21_grep -ivf 1 -ivf E TestText1.txt TestText2.txt TestText3.txt
-==40348== 
-==40348== Conditional jump or move depends on uninitialised value(s)
-==40348==    at 0x109BD1: main (in /home/user/work/C_Projects/greputilite/s21_grep)
-==40348== 
+==52933== Memcheck, a memory error detector
+==52933== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==52933== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==52933== Command: ./s21_grep -ivf 1 -ivf E TestText1.txt TestText2.txt TestText3.txt
+==52933== 
 grep: 1: No such file or directory
 grep: E: No such file or directory
 TestText1.txt:123   456
@@ -1034,21 +1011,14 @@ TestText3.txt:this is a test
 grep: 1: No such file or directory
 grep: E: No such file or directory
 TestText3.txt:another lines
-==40348== 
-==40348== HEAP SUMMARY:
-==40348==     in use at exit: 0 bytes in 0 blocks
-==40348==   total heap usage: 62 allocs, 62 frees, 41,656 bytes allocated
-==40348== 
-==40348== All heap blocks were freed -- no leaks are possible
-==40348== 
-==40348== Use --track-origins=yes to see where uninitialised values come from
-==40348== ERROR SUMMARY: 3 errors from 1 contexts (suppressed: 0 from 0)
-==40348== 
-==40348== 3 errors in context 1 of 1:
-==40348== Conditional jump or move depends on uninitialised value(s)
-==40348==    at 0x109BD1: main (in /home/user/work/C_Projects/greputilite/s21_grep)
-==40348== 
-==40348== ERROR SUMMARY: 3 errors from 1 contexts (suppressed: 0 from 0)
+==52933== 
+==52933== HEAP SUMMARY:
+==52933==     in use at exit: 0 bytes in 0 blocks
+==52933==   total heap usage: 62 allocs, 62 frees, 41,656 bytes allocated
+==52933== 
+==52933== All heap blocks were freed -- no leaks are possible
+==52933== 
+==52933== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 
 
@@ -1056,14 +1026,11 @@ TestText3.txt:another lines
 
  Test 32 : 
  
-==40357== Memcheck, a memory error detector
-==40357== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
-==40357== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
-==40357== Command: ./s21_grep -hicf 1 -hicf E TestText1.txt TestText2.txt TestText3.txt
-==40357== 
-==40357== Conditional jump or move depends on uninitialised value(s)
-==40357==    at 0x109BD1: main (in /home/user/work/C_Projects/greputilite/s21_grep)
-==40357== 
+==52942== Memcheck, a memory error detector
+==52942== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==52942== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==52942== Command: ./s21_grep -hicf 1 -hicf E TestText1.txt TestText2.txt TestText3.txt
+==52942== 
 grep: 1: No such file or directory
 grep: E: No such file or directory
 grep: 1: No such file or directory
@@ -1117,21 +1084,14 @@ grep: E: No such file or directory
 grep: 1: No such file or directory
 grep: E: No such file or directory
 0
-==40357== 
-==40357== HEAP SUMMARY:
-==40357==     in use at exit: 0 bytes in 0 blocks
-==40357==   total heap usage: 62 allocs, 62 frees, 41,656 bytes allocated
-==40357== 
-==40357== All heap blocks were freed -- no leaks are possible
-==40357== 
-==40357== Use --track-origins=yes to see where uninitialised values come from
-==40357== ERROR SUMMARY: 3 errors from 1 contexts (suppressed: 0 from 0)
-==40357== 
-==40357== 3 errors in context 1 of 1:
-==40357== Conditional jump or move depends on uninitialised value(s)
-==40357==    at 0x109BD1: main (in /home/user/work/C_Projects/greputilite/s21_grep)
-==40357== 
-==40357== ERROR SUMMARY: 3 errors from 1 contexts (suppressed: 0 from 0)
+==52942== 
+==52942== HEAP SUMMARY:
+==52942==     in use at exit: 0 bytes in 0 blocks
+==52942==   total heap usage: 62 allocs, 62 frees, 41,656 bytes allocated
+==52942== 
+==52942== All heap blocks were freed -- no leaks are possible
+==52942== 
+==52942== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 
 
@@ -1139,14 +1099,11 @@ grep: E: No such file or directory
 
  Test 33 : 
  
-==40368== Memcheck, a memory error detector
-==40368== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
-==40368== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
-==40368== Command: ./s21_grep -ilf 1 -ilf E TestText1.txt TestText2.txt TestText3.txt
-==40368== 
-==40368== Conditional jump or move depends on uninitialised value(s)
-==40368==    at 0x109BD1: main (in /home/user/work/C_Projects/greputilite/s21_grep)
-==40368== 
+==52953== Memcheck, a memory error detector
+==52953== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==52953== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==52953== Command: ./s21_grep -ilf 1 -ilf E TestText1.txt TestText2.txt TestText3.txt
+==52953== 
 grep: 1: No such file or directory
 grep: E: No such file or directory
 grep: 1: No such file or directory
@@ -1197,21 +1154,14 @@ grep: 1: No such file or directory
 grep: E: No such file or directory
 grep: 1: No such file or directory
 grep: E: No such file or directory
-==40368== 
-==40368== HEAP SUMMARY:
-==40368==     in use at exit: 0 bytes in 0 blocks
-==40368==   total heap usage: 62 allocs, 62 frees, 41,656 bytes allocated
-==40368== 
-==40368== All heap blocks were freed -- no leaks are possible
-==40368== 
-==40368== Use --track-origins=yes to see where uninitialised values come from
-==40368== ERROR SUMMARY: 3 errors from 1 contexts (suppressed: 0 from 0)
-==40368== 
-==40368== 3 errors in context 1 of 1:
-==40368== Conditional jump or move depends on uninitialised value(s)
-==40368==    at 0x109BD1: main (in /home/user/work/C_Projects/greputilite/s21_grep)
-==40368== 
-==40368== ERROR SUMMARY: 3 errors from 1 contexts (suppressed: 0 from 0)
+==52953== 
+==52953== HEAP SUMMARY:
+==52953==     in use at exit: 0 bytes in 0 blocks
+==52953==   total heap usage: 62 allocs, 62 frees, 41,656 bytes allocated
+==52953== 
+==52953== All heap blocks were freed -- no leaks are possible
+==52953== 
+==52953== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 
 
@@ -1219,14 +1169,11 @@ grep: E: No such file or directory
 
  Test 34 : 
  
-==40377== Memcheck, a memory error detector
-==40377== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
-==40377== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
-==40377== Command: ./s21_grep -hinf 1 -hinf E TestText1.txt TestText2.txt TestText3.txt
-==40377== 
-==40377== Conditional jump or move depends on uninitialised value(s)
-==40377==    at 0x109BD1: main (in /home/user/work/C_Projects/greputilite/s21_grep)
-==40377== 
+==52964== Memcheck, a memory error detector
+==52964== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==52964== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==52964== Command: ./s21_grep -hinf 1 -hinf E TestText1.txt TestText2.txt TestText3.txt
+==52964== 
 grep: 1: No such file or directory
 grep: E: No such file or directory
 grep: 1: No such file or directory
@@ -1277,21 +1224,14 @@ grep: 1: No such file or directory
 grep: E: No such file or directory
 grep: 1: No such file or directory
 grep: E: No such file or directory
-==40377== 
-==40377== HEAP SUMMARY:
-==40377==     in use at exit: 0 bytes in 0 blocks
-==40377==   total heap usage: 62 allocs, 62 frees, 41,656 bytes allocated
-==40377== 
-==40377== All heap blocks were freed -- no leaks are possible
-==40377== 
-==40377== Use --track-origins=yes to see where uninitialised values come from
-==40377== ERROR SUMMARY: 3 errors from 1 contexts (suppressed: 0 from 0)
-==40377== 
-==40377== 3 errors in context 1 of 1:
-==40377== Conditional jump or move depends on uninitialised value(s)
-==40377==    at 0x109BD1: main (in /home/user/work/C_Projects/greputilite/s21_grep)
-==40377== 
-==40377== ERROR SUMMARY: 3 errors from 1 contexts (suppressed: 0 from 0)
+==52964== 
+==52964== HEAP SUMMARY:
+==52964==     in use at exit: 0 bytes in 0 blocks
+==52964==   total heap usage: 62 allocs, 62 frees, 41,656 bytes allocated
+==52964== 
+==52964== All heap blocks were freed -- no leaks are possible
+==52964== 
+==52964== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 
 
@@ -1299,14 +1239,11 @@ grep: E: No such file or directory
 
  Test 35 : 
  
-==40388== Memcheck, a memory error detector
-==40388== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
-==40388== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
-==40388== Command: ./s21_grep -of 1 -of E TestText1.txt TestText2.txt TestText3.txt
-==40388== 
-==40388== Conditional jump or move depends on uninitialised value(s)
-==40388==    at 0x109BD1: main (in /home/user/work/C_Projects/greputilite/s21_grep)
-==40388== 
+==52973== Memcheck, a memory error detector
+==52973== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==52973== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==52973== Command: ./s21_grep -of 1 -of E TestText1.txt TestText2.txt TestText3.txt
+==52973== 
 grep: 1: No such file or directory
 grep: E: No such file or directory
 grep: 1: No such file or directory
@@ -1357,21 +1294,14 @@ grep: 1: No such file or directory
 grep: E: No such file or directory
 grep: 1: No such file or directory
 grep: E: No such file or directory
-==40388== 
-==40388== HEAP SUMMARY:
-==40388==     in use at exit: 0 bytes in 0 blocks
-==40388==   total heap usage: 62 allocs, 62 frees, 41,656 bytes allocated
-==40388== 
-==40388== All heap blocks were freed -- no leaks are possible
-==40388== 
-==40388== Use --track-origins=yes to see where uninitialised values come from
-==40388== ERROR SUMMARY: 3 errors from 1 contexts (suppressed: 0 from 0)
-==40388== 
-==40388== 3 errors in context 1 of 1:
-==40388== Conditional jump or move depends on uninitialised value(s)
-==40388==    at 0x109BD1: main (in /home/user/work/C_Projects/greputilite/s21_grep)
-==40388== 
-==40388== ERROR SUMMARY: 3 errors from 1 contexts (suppressed: 0 from 0)
+==52973== 
+==52973== HEAP SUMMARY:
+==52973==     in use at exit: 0 bytes in 0 blocks
+==52973==   total heap usage: 62 allocs, 62 frees, 41,656 bytes allocated
+==52973== 
+==52973== All heap blocks were freed -- no leaks are possible
+==52973== 
+==52973== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 
 
@@ -1379,14 +1309,11 @@ grep: E: No such file or directory
 
  Test 36 : 
  
-==40397== Memcheck, a memory error detector
-==40397== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
-==40397== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
-==40397== Command: ./s21_grep -iof 1 -iof E TestText1.txt TestText2.txt TestText3.txt
-==40397== 
-==40397== Conditional jump or move depends on uninitialised value(s)
-==40397==    at 0x109BD1: main (in /home/user/work/C_Projects/greputilite/s21_grep)
-==40397== 
+==52984== Memcheck, a memory error detector
+==52984== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==52984== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==52984== Command: ./s21_grep -iof 1 -iof E TestText1.txt TestText2.txt TestText3.txt
+==52984== 
 grep: 1: No such file or directory
 grep: E: No such file or directory
 grep: 1: No such file or directory
@@ -1437,21 +1364,14 @@ grep: 1: No such file or directory
 grep: E: No such file or directory
 grep: 1: No such file or directory
 grep: E: No such file or directory
-==40397== 
-==40397== HEAP SUMMARY:
-==40397==     in use at exit: 0 bytes in 0 blocks
-==40397==   total heap usage: 62 allocs, 62 frees, 41,656 bytes allocated
-==40397== 
-==40397== All heap blocks were freed -- no leaks are possible
-==40397== 
-==40397== Use --track-origins=yes to see where uninitialised values come from
-==40397== ERROR SUMMARY: 3 errors from 1 contexts (suppressed: 0 from 0)
-==40397== 
-==40397== 3 errors in context 1 of 1:
-==40397== Conditional jump or move depends on uninitialised value(s)
-==40397==    at 0x109BD1: main (in /home/user/work/C_Projects/greputilite/s21_grep)
-==40397== 
-==40397== ERROR SUMMARY: 3 errors from 1 contexts (suppressed: 0 from 0)
+==52984== 
+==52984== HEAP SUMMARY:
+==52984==     in use at exit: 0 bytes in 0 blocks
+==52984==   total heap usage: 62 allocs, 62 frees, 41,656 bytes allocated
+==52984== 
+==52984== All heap blocks were freed -- no leaks are possible
+==52984== 
+==52984== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 
 
@@ -1459,14 +1379,11 @@ grep: E: No such file or directory
 
  Test 37 : 
  
-==40408== Memcheck, a memory error detector
-==40408== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
-==40408== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
-==40408== Command: ./s21_grep -hicof 1 -hicof E TestText1.txt TestText2.txt TestText3.txt
-==40408== 
-==40408== Conditional jump or move depends on uninitialised value(s)
-==40408==    at 0x109BD1: main (in /home/user/work/C_Projects/greputilite/s21_grep)
-==40408== 
+==52993== Memcheck, a memory error detector
+==52993== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==52993== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==52993== Command: ./s21_grep -hicof 1 -hicof E TestText1.txt TestText2.txt TestText3.txt
+==52993== 
 grep: 1: No such file or directory
 grep: E: No such file or directory
 grep: 1: No such file or directory
@@ -1520,21 +1437,14 @@ grep: E: No such file or directory
 grep: 1: No such file or directory
 grep: E: No such file or directory
 0
-==40408== 
-==40408== HEAP SUMMARY:
-==40408==     in use at exit: 0 bytes in 0 blocks
-==40408==   total heap usage: 62 allocs, 62 frees, 41,656 bytes allocated
-==40408== 
-==40408== All heap blocks were freed -- no leaks are possible
-==40408== 
-==40408== Use --track-origins=yes to see where uninitialised values come from
-==40408== ERROR SUMMARY: 3 errors from 1 contexts (suppressed: 0 from 0)
-==40408== 
-==40408== 3 errors in context 1 of 1:
-==40408== Conditional jump or move depends on uninitialised value(s)
-==40408==    at 0x109BD1: main (in /home/user/work/C_Projects/greputilite/s21_grep)
-==40408== 
-==40408== ERROR SUMMARY: 3 errors from 1 contexts (suppressed: 0 from 0)
+==52993== 
+==52993== HEAP SUMMARY:
+==52993==     in use at exit: 0 bytes in 0 blocks
+==52993==   total heap usage: 62 allocs, 62 frees, 41,656 bytes allocated
+==52993== 
+==52993== All heap blocks were freed -- no leaks are possible
+==52993== 
+==52993== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 
 
@@ -1542,14 +1452,11 @@ grep: E: No such file or directory
 
  Test 38 : 
  
-==40417== Memcheck, a memory error detector
-==40417== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
-==40417== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
-==40417== Command: ./s21_grep -ilof 1 -ilof E TestText1.txt TestText2.txt TestText3.txt
-==40417== 
-==40417== Conditional jump or move depends on uninitialised value(s)
-==40417==    at 0x109BD1: main (in /home/user/work/C_Projects/greputilite/s21_grep)
-==40417== 
+==53004== Memcheck, a memory error detector
+==53004== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==53004== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==53004== Command: ./s21_grep -ilof 1 -ilof E TestText1.txt TestText2.txt TestText3.txt
+==53004== 
 grep: 1: No such file or directory
 grep: E: No such file or directory
 grep: 1: No such file or directory
@@ -1600,21 +1507,14 @@ grep: 1: No such file or directory
 grep: E: No such file or directory
 grep: 1: No such file or directory
 grep: E: No such file or directory
-==40417== 
-==40417== HEAP SUMMARY:
-==40417==     in use at exit: 0 bytes in 0 blocks
-==40417==   total heap usage: 62 allocs, 62 frees, 41,656 bytes allocated
-==40417== 
-==40417== All heap blocks were freed -- no leaks are possible
-==40417== 
-==40417== Use --track-origins=yes to see where uninitialised values come from
-==40417== ERROR SUMMARY: 3 errors from 1 contexts (suppressed: 0 from 0)
-==40417== 
-==40417== 3 errors in context 1 of 1:
-==40417== Conditional jump or move depends on uninitialised value(s)
-==40417==    at 0x109BD1: main (in /home/user/work/C_Projects/greputilite/s21_grep)
-==40417== 
-==40417== ERROR SUMMARY: 3 errors from 1 contexts (suppressed: 0 from 0)
+==53004== 
+==53004== HEAP SUMMARY:
+==53004==     in use at exit: 0 bytes in 0 blocks
+==53004==   total heap usage: 62 allocs, 62 frees, 41,656 bytes allocated
+==53004== 
+==53004== All heap blocks were freed -- no leaks are possible
+==53004== 
+==53004== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 
 
@@ -1622,14 +1522,11 @@ grep: E: No such file or directory
 
  Test 39 : 
  
-==40428== Memcheck, a memory error detector
-==40428== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
-==40428== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
-==40428== Command: ./s21_grep -hinof 1 -hinof E TestText1.txt TestText2.txt TestText3.txt
-==40428== 
-==40428== Conditional jump or move depends on uninitialised value(s)
-==40428==    at 0x109BD1: main (in /home/user/work/C_Projects/greputilite/s21_grep)
-==40428== 
+==53013== Memcheck, a memory error detector
+==53013== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==53013== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==53013== Command: ./s21_grep -hinof 1 -hinof E TestText1.txt TestText2.txt TestText3.txt
+==53013== 
 grep: 1: No such file or directory
 grep: E: No such file or directory
 grep: 1: No such file or directory
@@ -1680,18 +1577,11 @@ grep: 1: No such file or directory
 grep: E: No such file or directory
 grep: 1: No such file or directory
 grep: E: No such file or directory
-==40428== 
-==40428== HEAP SUMMARY:
-==40428==     in use at exit: 0 bytes in 0 blocks
-==40428==   total heap usage: 62 allocs, 62 frees, 41,656 bytes allocated
-==40428== 
-==40428== All heap blocks were freed -- no leaks are possible
-==40428== 
-==40428== Use --track-origins=yes to see where uninitialised values come from
-==40428== ERROR SUMMARY: 3 errors from 1 contexts (suppressed: 0 from 0)
-==40428== 
-==40428== 3 errors in context 1 of 1:
-==40428== Conditional jump or move depends on uninitialised value(s)
-==40428==    at 0x109BD1: main (in /home/user/work/C_Projects/greputilite/s21_grep)
-==40428== 
-==40428== ERROR SUMMARY: 3 errors from 1 contexts (suppressed: 0 from 0)
+==53013== 
+==53013== HEAP SUMMARY:
+==53013==     in use at exit: 0 bytes in 0 blocks
+==53013==   total heap usage: 62 allocs, 62 frees, 41,656 bytes allocated
+==53013== 
+==53013== All heap blocks were freed -- no leaks are possible
+==53013== 
+==53013== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
